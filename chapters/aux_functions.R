@@ -66,7 +66,7 @@ summary_df  <- function(dataset, symbol = "*", explanations = list(c(NULL, NULL)
 } 
 
 
-rep <- function(x) {
+fix_decimal_sep <- function(x) {
   y = (str_replace(x,",","."))
   y = (str_replace(y,"^-\\.","-0."))
   y = (str_replace(y,"^\\.","0."))
