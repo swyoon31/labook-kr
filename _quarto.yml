@@ -34,6 +34,8 @@ format:
   html:
     theme: cosmo
     css: styles.css
-  epub:
-    cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
-    prefer-html: true       # 인터랙티브 표(paged_table 등)는 EPUB에서 안 보이지만, 렌더 에러는 방지
+  # epub:
+  #   cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
+  #   prefer-html: true
+  # 위 EPUB 설정은 2장의 인터랙티브 표(rmarkdown::paged_table)와 호환 문제가 있어 임시로 비활성화함.
+  # GitHub Pages(HTML) 게시에는 영향 없음. EPUB이 다시 필요해지면 해당 표를 정적 이미지로 바꾼 뒤 주석을 해제할 것.
