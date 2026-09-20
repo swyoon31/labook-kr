@@ -13,7 +13,7 @@ library(reshape2)
 library(likert)
 library(igraph)
 library(rio)
-source("aux.R")
+source("aux_functions.R")
 ```
 
 ## 서론
