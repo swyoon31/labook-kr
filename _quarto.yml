@@ -2,13 +2,13 @@ project:
   type: book
 
 book:
-  title: "학습분석학 방법론과 지침서"
+  title: "학습분석학 방법론과 실제"
   subtitle: "R을 활용한 실전 가이드"
   navbar:
     left:
       - text: "홈"
         href: index.qmd
-      - text: "학습분석학 방법론과 지침서"
+      - text: "학습분석학 방법론과 실제"
         href: index.qmd
       - text: "고급 학습분석학 방법론"
         href: "https://swyoon31.github.io/alabook-kr/"
@@ -20,8 +20,8 @@ book:
     - index.qmd
     - part: "시작하기"
       chapters:
-        - href: chapters/개관.qmd
-          text: "개관"
+        - href: chapters/입문.qmd
+          text: "입문"
         - href: chapters/데이터.qmd
           text: "데이터"
     - part: "머신러닝"

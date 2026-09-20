@@ -1,0 +1,201 @@
+# 학습분석학을 이용하여 학습 과정의 다채로움을 포착하기 {#sec-intro}
+
+**저자:** Sonsoles López-Pernas, Kamila Misiejuk, Rogers Kaliisa, Miguel Á. Conde-González, Mohammed Saqr
+
+::: {.callout-note title="초록"}
+학습분석학(Learning Analytics)은 교육학과 컴퓨터과학의 교차점에 독특하게 자리하면서도 통계학, 심리계량학, 계량경제학, 수학, 언어학 등 여러 분과 학문과도 맞닿아 있어, 이 분야의 성장과 확장을 가속해왔다. 따라서 학습분석학 연구자들이 최신 방법론적·계산적 발전을 꾸준히 따라가며 자신의 연구를 진전시키는 일은 매우 중요한 과제이다. 그러나 기존 방법론들의 다양성과 복잡성 때문에, 이 분야에 처음 발을 들인 연구자든 숙련된 연구자든 이 과제가 부담스럽게 느껴질 수 있다. 이러한 험난한 여정에 동행하고자 하는 취지에서, 『Learning Analytics Methods and Tutorials – A Practical Guide Using R』는 연구자들이 학습분석학 분야를 공부하고 참고하며 혁신을 향한 첫걸음을 뗄 수 있도록 방법론적 안내서 역할을 하는 것을 목표로 한다. R 패키지 개발자와 방법론·응용 분야 전문가를 포함한 저자진의 독특하고 풍부한 배경과 전문성 덕분에, 이 책은 교육 분야의 선행 연구에서 각 방법이 어떻게 활용되었는지 충실히 설명하며 포괄적인 방법론들을 제시한다. 여기에는 순차 분석(Sequence Analysis), 마르코프 모형(Markov Models), 요인 분석(Factor Analysis), 프로세스 마이닝(Process Mining), 네트워크 분석(Network Analysis), 예측 모델링(Predictive Modeling), 군집화(Clustering) 등이 포함된다. 각 방법마다 실제 데이터셋과 사례 연구를 활용한 R 프로그래밍 언어 기반의 단계별 튜토리얼이 제공된다. 이에 더해, 초반 장들은 초심자 연구자들이 R 프로그래밍과 데이터 분석의 기초를 익힐 수 있도록 구성되어 있다. 본 장은 이 책의 서론으로서, 책의 주요 목적과 대상 독자를 설명한다. 또한 책의 구조와 각 장에서 다루는 방법론을 소개하며, 책에 담긴 튜토리얼을 따라 하는 데 도움이 되는 실습 코드·데이터 저장소도 안내한다.
+:::
+
+## 서론
+
+학습분석학이라는 분야가 공식적으로 탄생한 시점은 흔히 2011년 제1회 학습분석·지식 국제학술대회(Learning Analytics & Knowledge Conference, LAK)로 여겨지며, 이 자리에서 오늘날 널리 쓰이는 정의, 즉 "학습자와 그들이 속한 맥락에 관한 데이터를 측정·수집·분석·보고하여 학습과 그 학습이 일어나는 환경을 이해하고 최적화하는 것" \[1\]이라는 정의가 처음 만들어졌다. 이후 수년에 걸쳐 학습분석학은 범위와 규모, 다양성 면에서 성장을 거듭했고, 여러 학문 분야를 하나의 우산 아래로 끌어들이며 다양한 배경을 가진 연구자들을 끌어모았다. 이러한 관심 증가는 수많은 논문, 연구 프로젝트, 전문 연구 조직, 대규모 프로젝트 지원으로 이어졌다. 학습분석학보다 먼저 시작된 데이터 집약적 분야들(예: 2007년의 학업 분석학(Academic Analytics)과 2008년의 교육 데이터 마이닝(Educational Data Mining, EDM))이 있었지만, 이러한 방법들 그리고 이와 밀접하게 관련된 분야 전반에 대한 관심은 학습분석학이 빠르게 자리 잡은 이후에야 급증했다. 학습분석학이 교육학과 컴퓨터과학의 교차점에 독특하게 자리하면서도 통계학, 심리계량학, 계량경제학, 수학, 언어학 등 여러 분과와 맞닿아 있다는 점이 이 분야의 성장과 확장을 가속해왔다. 따라서 학습분석학 연구자들이 최신 방법론적·계산적 발전을 꾸준히 따라가며 자신의 연구를 진전시키는 일은 매우 중요한 과제다. 기존 방법론들의 다양성과 복잡성은 이 분야에 처음 발을 들인 연구자든 숙련된 연구자든 이 과제를 부담스럽게 만들 수 있다. 학습분석학 연구를 수행할 때 연구자는 자신의 연구 질문에 답하기 위해 학습자로부터 어떤 데이터를 수집할 수 있고 수집해야 하는지를 결정해야 한다. 또한 그러한 데이터에 어떤 분석 방법을 적용할 수 있는지, 그리고 그 방법이 지닌 한계는 무엇인지를 이해하고 판단해야 한다. 나아가 분석 결과를 해석하고 기존 문헌과 학습 이론에 비추어 그 맥락을 짚어내야 한다. 이러한 험난한 여정에 연구자들과 함께하고자, 이 책은 연구자들이 학습분석학을 공부하고 참고하며 혁신을 향한 첫걸음을 뗄 수 있도록 돕는 방법론적 안내서가 되고자 한다.
+
+이 책에서 다루는 모든 방법론은 학습분석학이라는 분야가 생기기 전부터 이미 존재해온 것들이다. 예를 들어 학생의 성취를 예측하는 연구는 거의 한 세기 전으로 거슬러 올라갈 수 있고 \[2\], 사회 네트워크 분석(Social Network Analysis, SNA)을 통해 학생들의 관계망을 이해하려는 시도는 50년도 더 전에 시작되었다 \[3\]. 마찬가지로 프로세스 마이닝, 순차 분석, 마르코프 모형 역시 모두 학습분석학이라는 분야가 태어나기 전부터 있었던 방법들이다 \[4–6\]. 이 방법들은 학습분석학 밖에서 태어났을 뿐만 아니라, 지금도 각자의 본래 분야에서 계속 개발되고 발전하고 있다. 그럼에도 학습분석학은 이러한 방법론적 발전과 점점 풍부해지는 디지털 데이터, 계산 자원, 데이터 과학의 이점을 잘 활용하여, 교육 분야의 데이터 집약적 연구를 대중화하고 이 분야를 하나로 묶어내는 데 성공했다 \[7\].
+
+이 책의 각 장을 쓴 저자 명단을 보면, 학습분석학이라는 분야가 얼마나 다양한 방법론과 학문 분야에서 비롯되었는지를 알 수 있다. 저자진에는 R 패키지 개발자와 방법론·응용 전문가들이 포함되어 있어 최신의 조합을 만들어낸다. 우선 세계적으로 유명한 순차 분석 전문가인 Gilbert Ritschard와 Matthias Studer(제네바대학교)가 있는데, 이들은 순차 분석에서 가장 핵심적인 R 패키지인 `TraMineR`의 개발자이다. 이와 밀접하게 관련된 인물로는 순차 데이터의 혼합 은닉 마르코프 모형(Mixture Hidden Markov Models)을 위한 혁신적인 R 패키지 `seqHMM`을 개발한 Satu Helske와 Jouni Helske(투르쿠대학교)가 있으며, 이 패키지는 다양한 시각화와 통계 분석 기능을 갖추고 있다. 또한 저자 명단에는 분류(Classification)와 가우스 유한 혼합 모형을 이용한 밀도 추정에 가장 널리 쓰이는 군집화 패키지 중 하나인 `mclust`의 개발자 Luca Scrucca(페루자대학교)와, 공변량을 포함한 가우스 절약형 군집화 모형(Gaussian Parsimonious Clustering Models)을 위한 `MoEClust` 등 여러 R 패키지를 만든 Keefe Murphy(메이누스대학교)도 포함되어 있다. 인식론적 네트워크 분석(Epistemic Network Analysis)을 위한 R 패키지 `rENA`의 개발자인 David Williamson Shaffer(위스콘신대학교 매디슨)와, `rENA` 및 순서 네트워크 분석(Ordered Network Analysis) 그룹의 동료인 Yuanru Tan, Andrew Ruis(위스콘신대학교 매디슨), Zachari Swiecki(모나쉬대학교)도 함께한다. 또한 전이 및 혼합 요인 분석을 제공하는 잠재 마르코프 요인 분석(Latent Markov Factor Analysis)을 위한 혁신적 R 패키지 `lmfa`의 개발자 Leonie V.D.E. Vogelsmeier(틸부르흐대학교), 동적 다변량 패널 모형(Dynamic Multivariate Panel Models)을 위한 `dynamite` R 패키지의 개발자 Santtu Tikka(위배스퀼레대학교)도 저자로 참여했다. 이 외에도 여러 분야의 저명한 방법론 전문가들이 함께하는데, Joran Jongerling(틸부르흐대학교), Emorie Beck(UC 데이비스), Merja Heinäniemi와 Juho Kopra(동핀란드대학교), Marieke Schreuder(KU 루벤)가 그들이다. 마지막으로 여러 시니어 및 신진 학습분석학 연구자들도 함께한다: Jelena Jovanović(베오그라드대학교); Ángel Hernández-García, Javier Conde, Laura Del-Río-Carazo, Carlos Cuenca-Enrique(마드리드 공과대학교); Adrienne Traxler(코펜하겐대학교); Kamila Misiejuk(베르겐대학교); Miguel Ángel Conde(레온대학교); Marion Durand(동핀란드대학교). 이 책의 편집자인 Mohammed Saqr와 Sonsoles López-Pernas(동핀란드대학교) 역시 오랜 세월 다양한 방법론과 여러 학문을 넘나드는 학습분석학 연구를 수행해온 이력을 지니고 있다.
+
+저자진의 폭넓고 다양한 배경과 전문성 덕분에, 이 책은 포괄적인 방법론들을 충실하게 설명하고 있다. 각 방법마다 실제 데이터셋과 사례 연구를 활용한 R 프로그래밍 언어 기반의 단계별 튜토리얼이 제시된다. 책은 독자가 R 프로그래밍에 익숙해질 수 있도록 돕는 입문 절로 시작하는데, 여기서는 언어의 기초, 데이터 전처리, 기초 통계, 데이터 시각화를 다룬다. 이어서 교육 데이터에 적용되는 예측과 군집화 같은 고전적인 머신러닝 방법으로 넘어간다. 이러한 방법들은 독자가 성취도, 중도 탈락, 위험군 학생을 예측하거나, 동기나 참여도(Engagement) 같은 특정 특성에 따라 학생들을 여러 집단이나 프로파일로 나누는 데 활용된다. 이어서 순차 분석, 마르코프 모형, 프로세스 마이닝 같은 시간적 방법론(Temporal Methods)을 다루는 방대한 절이 이어지는데, 이 방법들은 로그 흔적 데이터가 지닌 무궁무진한 가능성을 활용할 수 있게 해준다. 이어서 사회 네트워크 분석, 인식론적 네트워크 분석, 순서 네트워크 분석, 시간적 네트워크(Temporal Networks) 등 다양한 형태의 네트워크 분석을 다룬다. 이러한 방법들은 학습의 핵심 측면인 개인들과 개념들 간의 협력과 관계를 이해하는 데 매우 중요하다. 책은 심리적 네트워크(Psychological Networks), 요인 분석, 구조방정식모형(Structural Equation Modeling, SEM) 등 심리계량학을 다루는 절로 마무리되는데, 이는 자기보고식 데이터 등을 분석하는 데 필수적인 도구들이다. 우리는 독자들이 이 책을 학습분석학 방법론을 안내하는 유용한 길잡이로 활용하여, 데이터 기반 통찰이 교육자와 학습자, 연구자에게 어떤 도움을 줄 수 있는지를 발견하기를 바란다.
+
+이 책은 모든 단계에 있는 학습분석학 연구자(그리고 넓게는 교육 연구자)를 대상으로 한다. R 경험이 전혀 없는 이 분야의 신규 진입자를 가르치기에도 적합한데, 입문 장들이 독자가 R 프로그래밍과 데이터 분석의 기초에 익숙해지도록 구성되어 있기 때문이다. 동시에 이 책은 학습분석학이나 데이터 과학 전반의 전문가들이 관심을 가질 만한 고급 방법론도 다룬다. 게다가 여기서 다루는 기술들은 다른 분야로도 전이될 수 있어, 교육 밖의 다른 맥락에서도 적용할 수 있다.
+
+## 이 책의 구성
+
+### 입문 장
+
+이 책의 첫 번째 절은 R 프로그래밍 언어와, 책 전체에서 분석할 데이터에 익숙해질 수 있는 기초를 제공한다. 이 절에서는 데이터 전처리와 탐색적 분석 같은 데이터 분석 과정의 기본 단계를 다룬다. 데이터 전처리 과정에서는 교육 데이터를 정제하고 추가 분석을 위해 준비하는데, 원자료로부터 학습 지표를 구축하고 개념화하는 것과 관련된 여러 중요한 결정이 학습분석학 과정의 이 필수 단계에서 이루어진다. 탐색적 분석은 시각화나 간단한 통계를 이용해 데이터에서 발견할 수 있는 흥미로운 현상을 초기에 포착할 수 있게 해준다. 이러한 기법을 활용하면 심층 분석의 방향과 더 고급 분석 방법의 선택을 이끄는 데 도움이 된다.
+
+**2장: 교육 연구 훈련과 활용을 위한 폭넓은 데이터셋 모음** \[8\]
+
+*Sonsoles López-Pernas, Mohammed Saqr, Javier Conde, Laura Del-Río-Carazo*
+
+이 책의 목표가 학습분석학 방법론을 실제로 구현하는 방법에 대한 안내서와 튜토리얼을 제공하는 것이므로, 적절한 데이터를 활용하는 것은 이 방법들을 학습분석학 연구 안에서 맥락화하는 데 핵심적인 요소다. 2장은 학습분석학에서 가장 중요한 데이터 유형들을 소개하며 책을 시작하고, 여러 방법을 설명하는 데 앞으로 계속 사용할 다양하고 잘 정리된 데이터셋 모음을 제공한다. 분석 대상 데이터를 이해하는 것은 이 책에서 배울 분석들을 해석하는 데 필수적인 단계이므로, 독자는 이후 장들의 튜토리얼을 따라가기 쉽도록 이 장에서 설명하는 데이터셋들에 먼저 익숙해지는 것이 좋다.
+
+**3장: 교육 연구 R과 함께 시작하기** \[9\]
+
+*Santtu Tikka, Juho Kopra, Merja Heinäniemi, Sonsoles López-Pernas, Mohammed Saqr*
+
+이 책의 첫 번째 튜토리얼 성격의 장은 R 프로그래밍의 기초를 소개하며, 특히 RStudio 통합개발환경과 `tidyverse` 프로그래밍 패러다임에 중점을 둔다. R 프로그래밍 언어는 학습분석학 분야에서 데이터 분석을 수행하는 데 널리 쓰이는 도구로 자리 잡았다. 이 장에서는 데이터 타입과 구조, 제어 구조, 파이프, 함수, 반복문, 입출력 작업 같은 주제를 다룬다. 이 장을 마치면 독자는 R 프로그래밍의 기초를 확실히 이해하고, R을 이용한 데이터 다루기(Data Wrangling)와 기초 통계 같은 더 심화된 주제를 배울 수 있는 도구를 갖추게 될 것이다.
+
+**4장: R을 활용한 교육 데이터 정제 및 전처리** \[10\]
+
+*Juho Kopra, Santtu Tikka, Merja Heinäniemi, Sonsoles López-Pernas, Mohammed Saqr*
+
+R 프로그래밍 언어의 기초를 배운 뒤, 4장은 한 단계 더 나아가 독자에게 데이터 다루기, 즉 데이터 정제와 전처리를 소개한다. 데이터 다루기는 데이터 분석 과정에서, 특히 학습분석학이라는 맥락에서 매우 중요한 단계다. 이 장은 R을 이용한 데이터 다루기를 소개하며, 정돈된 데이터(Tidy Data)에 초점을 맞춰 데이터 불러오기, 정제, 조작, 재구조화 같은 주제를 다룬다. 구체적으로 독자는 여러 파일 형식(예: CSV, Excel)에서 데이터를 읽는 방법, `dplyr` 패키지를 이용해 데이터를 조작하는 방법, `tidyr` 패키지를 이용해 데이터를 재구조화하는 방법을 배운다. 이에 더해 이 장은 여러 데이터 소스를 결합하는 기법도 다룬다.
+
+**5장: 교육 연구자를 위한 R 기초 통계** \[11\]
+
+*Santtu Tikka, Juho Kopra, Merja Heinäniemi, Sonsoles López-Pernas, Mohammed Saqr*
+
+통계는 학습분석학에서 근본적인 역할을 하며, 학습 환경에서 생성되는 방대한 데이터를 분석하고 이해하며, 관계를 시각화하고, 가설을 검증하고, 비교를 수행하는 수단을 제공한다. 이 책의 5장은 R을 이용한 기초 통계 개념을 소개하며, 중심 경향성 척도(Measures of Central Tendency), 변동성, 상관관계, 회귀 분석 같은 주제를 다룬다. 구체적으로 독자는 기술통계(Descriptive Statistics)를 계산하고, 가설을 검증하고, 단순 선형 회귀 분석을 수행하는 방법을 배운다. 이 장에는 학습분석학 분야의 실제와 같은 데이터셋을 이용한 실습 예제도 포함된다. 이 장을 마치면 독자는 학습분석학에서 흔히 쓰이는 기초 통계 개념과 방법을 확실히 이해하고, R을 이용해 학습 데이터를 통계적으로 분석하는 실질적인 능력도 갖추게 될 것이다.
+
+**6장: R로 교육 데이터를 시각화하고 보고하기** \[12\]
+
+*Sonsoles López-Pernas, Kamila Misiejuk, Santtu Tikka, Mohammed Saqr, Juho Kopra, Merja Heinäniemi*
+
+데이터 시각화는 학습분석학 연구에서 핵심적인 위치를 차지하며, 학습 대시보드의 기반이 되고, 결과와 통찰을 이해관계자에게 보고하는 주된 방법이기도 하다. 6장은 잘 알려진 R 패키지를 이용해 여러 유형의 데이터셋을 의미 있고 보기에도 좋은 방식으로 시각화하는 과정을 안내한다. 주요 시각화 유형들이 사용법과 활용 사례에 대한 설명과 함께 소개되며, 학습과 관련된 예시들도 자세히 다뤄진다. 예를 들어 독자는 학습관리시스템(Learning Management System, LMS)에서 추출한 학습자의 로그를 시각화하여, 흔적 데이터가 학생들의 학습 활동을 추적하는 데 어떻게 쓰일 수 있는지를 보여주는 방법을 배운다. 또한 독자는 요약 통계를 담은 전문적인 표를 만드는 방법도 익힐 수 있다.
+
+### 머신러닝 방법론
+
+다음 절에서는 학습분석학 초창기부터 이어져 온 대표적인 고전적 머신러닝 방법인 예측 모델링과 군집화를 다룬다. 예측 모델링은 학습분석학 연구에서 널리 쓰이는 지도 학습 방법으로, 과거 데이터의 패턴을 분석해 학생들의 미래 성과를 예측한다. 군집화는 비지도 학습 방법으로, 데이터에서 유사한 패턴을 탐지하며, 보통 개인적 특성이나 관찰된 행동, 학습 성과에 따라 학생들을 분류하는 데 쓰인다. 두 방법 모두 학생의 중도 탈락 예방, 학업 성취 향상 전략 비교, 참여도가 낮은 학생 식별 등 교육 현장의 다양한 과제를 해결하는 데 활용된다. 또한 그 결과는 학생의 성공을 돕기 위한 특정 개입을 촉발하거나, 특정 지표에 근거해 학생의 성과에 대한 인식을 높이는 데 자주 활용된다.
+
+**7장: R을 이용한 학습분석학의 예측 모델링** \[13\]
+
+*Jelena Jovanovic, Sonsoles López Pernas, Mohamed Saqr*
+
+학습자의 수강 과목에서 성과를 예측하는 것은 이 분야가 탄생한 이래로 학습분석학의 중심 주제였다. 그 주된 동기는 성취도가 낮을 위험에 놓인 학습자를 식별하여, 학습자 데이터 분석에서 도출된 개입 전략을 바탕으로 시기적절한 지원을 제공하려는 데 있다. 학생의 성공을 예측하기 위해, 다양한 데이터 소스로부터 나온 수많은 지표와 다양한 예측 알고리즘이 문헌에서 검토되고 보고되어 왔다. 7장은 선행 연구에서 실제로 활용된 주요 목표, 지표, 알고리즘에 대한 검토와 함께, R을 이용해 학습분석학에서 예측 모델링을 수행하는 단계별 튜토리얼을 통해 독자에게 예측 모델링을 소개한다. 이 튜토리얼은 학습관리시스템에서 나온 학습 흔적을 이용해 학생의 성공을 예측하는 방법을 보여주며, 데이터 준비부터 구축한 모델의 평가까지 필요한 모든 단계를 독자에게 안내한다.
+
+**8장: R을 이용한 비유사도 기반 교육 데이터 군집화** \[14\]
+
+*Keefe Murphy, Sonsoles López-Pernas, Mohammed Saqr*
+
+8장은 학습분석학 연구에서 또 하나의 핵심 방법인 군집화를 다룬다. 군집화는 데이터 속에 숨어 있는 패턴과 하위 집단을 밝혀내는 기법들을 통틀어 일컫는 말이다. 학생들 사이의 패턴이나 차이를 발견하면 교사와 연구자는 학생들의 다양성과 그들의 학습 과정을 더 잘 이해하고, 학생들의 서로 다른 교육적 요구에 맞춰 지원을 조정할 수 있다. 이 장은 비유사도 기반 군집화(Dissimilarity-based Clustering) 방법의 이론적 배경을 소개한다. 이어서 가장 널리 쓰이는 휴리스틱 기반 비유사도 군집화 알고리즘 중 일부, 즉 K-평균(K-means), K-중심점(K-medoids), 병합적 계층 군집화(Agglomerative Hierarchical Clustering)에 초점을 맞춘다. 최적의 군집 수를 선택하는 방법들도 함께 제시되는데, 특정 방법에서 군집 수 K를 선택하는 기준뿐 아니라, 여러 경쟁하는 방법론 중 어떤 군집화 해법을 선택할지를 안내하는 기준도 다룬다. 이 모든 내용은 실제 교육 데이터셋을 이용한 R 튜토리얼로 자세히 설명된다.
+
+**9장: 잠재 프로파일 분석을 통한 교육 분야 모형 기반 군집화 입문과 R 튜토리얼** \[15\]
+
+*Luca Scrucca, Mohammed Saqr, Sonsoles López-Pernas, Keefe Murphy*
+
+9장은 학생들의 행동이나 기능 속에 존재하는 서로 다른 패턴이나 하위 집단을 포착하는 또 다른 접근법을 제시한다. 학생 집단 전체를 대표하는 하나의 평균적 패턴이 존재한다고 가정하려면, 측정하려는 구성 개념이 모든 학생에게 동일한 인과 메커니즘과 동일한 발달 패턴을 가지고, 정확히 같은 방식으로 영향을 미친다고 가정해야 한다. 사람 중심 방법으로서 유한 가우스 혼합 모형(Finite Gaussian Mixture Model) 또는 잠재 프로파일 분석(Latent Profile Analysis)을 이용해, 이 장은 모형 기반 군집화의 원리, 군집 수를 선택하는 방법, 군집화 결과의 평가, 그리고 코드와 실제 데이터셋을 곁들인 상세한 안내를 포함하는 입문을 제공한다. 튜토리얼 부분에서는 잠재적이거나 관찰되지 않은 군집을 식별함으로써 참여도 데이터 안에 존재하는 이질성을 밝혀내는 방법을 보여준다. 논의 부분에서는 결과의 해석, 모형 기반 군집화의 장점, 그리고 이 방법이 다른 방법들과 어떻게 비교되는지를 상세히 설명한다.
+
+### 시간적 방법론
+
+다음으로 학습분석학의 시간적 방법론에 대한 소개를 이어가고자 한다. 단순히 사건이나 활동의 횟수만을 세는 방법들과 달리, 시간적 방법론은 사건의 순서와 시간성, 그리고 그 사이의 전이를 인정하는데, 이는 학습의 핵심적인 측면이다. 시간적 방법론은 학생들이 교육 기술을 사용하면서 남기는 흔적 로그 데이터를 활용할 수 있게 해주고, 종단적 과정(예: 전체 학업 프로그램)을 연구할 수 있게 해주기 때문에 점점 더 많은 관심을 받고 있다. 이러한 방법들은 사회과학에서 비롯되어 학습분석학 분야로 도입되고 응용되었다. 이 절에서는 순차 분석을 다루는 세 개의 장과, 마르코프 모형 및 프로세스 마이닝을 통한 전이 분석을 다루는 두 개의 장을 제공한다.
+
+**10장: 교육에서의 순차 분석: 원리, 기법, 그리고 R 튜토리얼** \[16\]
+
+*Mohammed Saqr, Sonsoles López-Pernas, Satu Helske, Marion Durand, Keefe Murphy, Matthias Studer, Gilbert Ritschard*
+
+순차 분석은 학습분석학에서 점점 더 널리 쓰이고 있는 데이터 마이닝 기법이다. 순차 분석을 이용하면 순차적 데이터에서 의미 있는 통찰을 이끌어낼 수 있다. 즉, 학습 데이터의 순차적 패턴을 요약하고 그 패턴들을 동질적인 집단으로 분류할 수 있다. 10장은 학생들의 온라인 활동에 대한 실제 순차적 흔적 로그 데이터를 이용한 단계별 예시를 통해 독자에게 순차 분석 기법과 도구를 소개한다. 독자는 흔히 쓰이는 순차 그림을 시각화하고 그 결과를 해석하는 방법을 안내받는다. 순차 분석에서 중요한 부분 중 하나는 군집화 기법을 통해 순차 데이터 안의 패턴을 발견하는 것이다. 따라서 이 장은 다양한 순차 군집화 방법, 군집 지수의 계산, 군집화 결과의 평가를 보여준다.
+
+**11장: 교육에서 종단적 과정의 동역학 모델링—VaSSTra 방법에 대한 R 튜토리얼** \[17\]
+
+*Sonsoles López-Pernas, Mohammed Saqr*
+
+앞 장에서 얻은 지식을 바탕으로, 11장은 여러 시점에 걸친 다중 변수를 분석하는 방법인 VaSSTra를 다룬다. 이 방법의 핵심 아이디어는 사람 기반 방법을 이용해 각 시점의 여러 변수를 하나의 상태로 요약하는 것이다. 그런 다음 순차 분석을 이용해 각 개인의 상태 순서를 분석할 수 있고, 군집화 기법을 이용해 그러한 상태들이 시간에 따라 변화하는 궤적 중 유사한 것들을 탐지할 수 있다. 이 방법은 참여도에 관한 사례 연구를 통해 설명된다. 학생들의 온라인 활동(각 활동의 빈도, 규칙성 등)으로부터 참여도와 관련된 여러 변수가 도출된다. 이 변수들은 각 강좌에서 학생들을 세 가지 상태(활동적, 보통, 비참여)로 군집화하는 데 쓰인다. 그런 다음 순차 분석을 이용해 전체 프로그램에 걸친 참여 상태의 순서를 지도로 나타낸다. 마지막으로 군집화 메커니즘을 이용해 서로 구별되는 참여도 궤적을 탐지한다.
+
+**12장: 교육에서 마르코프 모형을 이용한 전이 분석과 프로세스 마이닝에 대한 현대적 접근** \[18\]
+
+*Jouni Helske, Satu Helske, Mohammed Saqr, Sonsoles López-Pernas, Keefe Murphy*
+
+12장은 시간적 과정을 모델링하는 데 널리 쓰이는 기법인 마르코프 모형을 소개한다. 앞선 순차 분석 장들에서 본 결정론적 접근과 달리, 마르코프 모형은 확률적 모형으로, 순차 전체를 연구하는 대신 상태 간의 전이에 초점을 맞춘다. 이 장은 마르코프 모형을 소개하고, 그 가장 흔한 변형들, 즉 1차 마르코프 모형(First-order Markov Models), 은닉 마르코프 모형(Hidden Markov Models), 혼합 마르코프 모형(Mixture Markov Models), 혼합 은닉 마르코프 모형(Hidden Mixture Markov Models)을 구분한다. 모든 구현은 학생들의 종단 데이터를 이용해 R 패키지 `seqHMM`을 활용한 단계별 튜토리얼로 설명된다. 이 장은 또한 마르코프 모형을 이용한 확률적 프로세스 마이닝을 수행하는 완전한 안내와, 여러 프로세스 모형을 그리고 비교하고 군집화하는 방법들도 제시한다.
+
+**13장: R을 이용한 교육 연구의 다채널 순차 분석** \[19\]
+
+*Sonsoles López-Pernas, Satu Helske, Mohammed Saqr, Keefe Murphy*
+
+학습자 데이터를 다룰 때, 학습 과정의 모든 차원을 포착하기에 단 하나의 정보 소스로는 부족한 경우가 있다. 다행히 순차 분석은 하나의 방법으로서, 동일한 시간 구조를 따른다면 여러 순차(이를 '채널'이라 부른다)를 동시에 살펴보는 것을 지원한다. 13장은 다채널 순차 분석(Multichannel Sequence Analysis)을 다루며, 독자가 동기화된 여러 순차를 함께 연구하고 시각화하며, 여러 채널의 값에 기반해 이를 서로 다른 궤적으로 군집화할 수 있도록 한다. 이 장에서는 두 가지 군집화 방법을 제시하는데, 하나는 거리 기반(10장 참고), 다른 하나는 마르코프 모형 기반(12장 참고)이다. 학업 프로그램 전체에 걸친 학생 참여도와 성취도 사이의 종단적 연관성을 연구함으로써 이 방법을 설명한다.
+
+**14장: R 활용 교육 프로세스 마이닝 수행 이유와 방법, 그리고 시점** \[20\]
+
+*Sonsoles López-Pernas, Mohammed Saqr*
+
+프로세스 마이닝은 시간순으로 정렬된 이벤트 로그로부터 의미 있는 통찰을 이끌어낼 수 있게 해주는, 비교적 최근에 등장한 분석 방법이다. 프로세스 마이닝의 핵심 목표는 데이터로부터 실제 행위 과정을 발견하고, 그 효율성을 평가하며, 나아가 이를 지원하거나 개선하는 것이다. 교육 분야에 도입된 이후 프로세스 마이닝은 학생들의 학습 과정을 지도로 나타내고, 학습자의 전략을 시각화하며, 서로 다른 학습 집단 간 학습 접근 방식의 차이를 보여주는 데 활용되어 왔다. 14장은 프로세스 마이닝을 위해 학습자 데이터를 준비하는 방법과, `bupaverse` 프레임워크를 이용해 프로세스 데이터를 시각화하는 방법을 보여준다. 또한 독자는 학습 과정 내 단계나 활동 사이의 상태 전이를 어떻게 분석할 수 있는지를 배울 것이다.
+
+### 네트워크 분석
+
+이 책의 다음 절은 학생, 교사, 주제 사이의 관계처럼 교육 데이터를 분석할 때 나타나는 관계적 측면을 다룬다. 네트워크 분석은 이러한 관계적 측면을 연구하는 데 쓰이는 기본 방법이다. 사회 네트워크 분석을 통해 연구자는 동료 간의 협력과 논의를 연구하고, 각 학생이 네트워크 안에서 차지하는 역할을 이해할 수 있다. 나아가 커뮤니티 탐지(Community Detection)를 통해 네트워크 안에서 서로 다른 동료들과 상호작용하는 것보다 서로 더 많이 상호작용하는, 구별되는 동료 집단을 발견할 수 있다. 심지어 앞 절에서 소개한 시간적 방법론과 네트워크 분석을 결합하여 시간적 네트워크를 만들거나, 인식론적 네트워크 분석 또는 순서 네트워크 분석을 이용해 주제나 구성 개념의 동시 발현(Co-occurrence) 패턴을 탐색할 수도 있다.
+
+**15장: 사회 네트워크 분석: R 활용 기초 이론, 가이드 및 튜토리얼** \[21\]
+
+*Mohammed Saqr, Sonsoles López-Pernas, Miguel Ángel Conde, Ángel Hernández-García*
+
+지난 50년 동안 학습 네트워크는 학생들 사이의 협력 네트워크를 지도로 나타내고, 동료의 영향을 연구하며, 협력 학습의 관계적 차원을 포착하는 데 쓰여왔다. 이에 더해 네트워크는 담론의 의미, 행동 간의 관계, 교사들 사이의 관계 패턴을 연구하는 데도 활용되었다. 네트워크는 데이터 분석을 위한 강력한 틀이자 방대한 가능성을 지니고 있다. 15장은 사회 네트워크 분석의 개념과 방법을 소개하고, 연구자가 실제 데이터를 이용해 네트워크 분석을 활용하는 방법에 대한 상세한 안내를 제공한다. 이 장은 학습자의 역할과 교육적 맥락과의 관련성에 중점을 두고 네트워크 분석과 시각화를 보여준다. 또한 중심성(Centrality)이나 매개 중심성(Betweenness Centrality) 같은 여러 사회 네트워크 지표에 대한 수학적 분석과 해석을, 실제로 어떻게 활용할 수 있는지에 대한 여러 예시와 함께 제공한다.
+
+**16장: R을 활용한 학습 네트워크 내 커뮤니티 탐지** \[22\]
+
+*Ángel Hernández-García, Carlos Cuenca-Enrique, Adrienne Traxler, Sonsoles López-Pernas, Miguel Ángel Conde, Mohammed Saqr*
+
+학습 상황에서 커뮤니티란, 전체 학년 집단 안에서 다른 학생들보다 서로 더 크게 협력하는 학생들의 하위 집단을 뜻할 수 있다. 이러한 커뮤니티를 찾아내는 것은 상호작용 과정, 형성된 집단의 구조와 행동, 그리고 이들이 전체 학습 과정에 어떻게 기여하는지를 이해하는 데 필수적이다. 16장은 15장에서 다룬 사회 네트워크의 원리를 바탕으로 커뮤니티 탐지라는 주제를 소개한다. 커뮤니티 탐지의 주된 목표는 네트워크 안에서 비슷한 특성을 공유하는 노드들의 서로 다른 집단이나 군집을 식별하는 것이다. 사회 네트워크 안의 커뮤니티를 이해하는 한 가지 방법은, 내부 연결의 수가 외부 연결의 수보다 많은 하위 네트워크로 보는 것이다. 즉 한 커뮤니티의 구성원은 다른 커뮤니티의 구성원보다 서로 연결될 확률이 더 높다. 이 장은 더 넓은 네트워크 안에서 커뮤니티를 탐지하는 데 초점을 맞추며, R을 이용해 이를 시각화하는 방법을 보여준다.
+
+**17장: 시간적 네트워크 분석: 입문, 방법, 그리고 R을 이용한 분석** \[23\]
+
+*Mohammed Saqr*
+
+학습은 관계적이고 상호의존적이며 시간적인 것으로 볼 수 있으므로, 시간에 따라 펼쳐지는 이러한 다면적이고 동적인 과정을 설명할 수 있는 방법이 필요하다. 17장은 시간적 측면과 관계적 측면을 하나의 분석 틀, 즉 시간적 네트워크 안에 결합한다. 시간적 네트워크는 시간에 따른 학습 과정, 즉 활동과 커뮤니티, 사회적 과정의 출현과 흐름을 세밀한 동적 분석을 통해 모델링할 수 있게 해준다. 이는 지식의 공동 구성, 정보의 흐름, 관계 형성 같은 현상에 대한 통찰을 제공할 수 있다. 이 장은 시간적 네트워크의 기본 개념과 그 유형(접촉형과 구간형), 그리고 기법들을 소개한다. 또한 그래프 수준과 노드 수준에서의 네트워크 구축, 시각화, 통계 분석을 포함하는 시간적 네트워크 분석에 대한 상세한 안내도 제공한다.
+
+**18장: 학습분석학에서의 인식론적 네트워크 분석과 순서 네트워크 분석** \[24\]
+
+*Yuanru Tan, Zachari Swiecki, Andrew Ruis, David Williamson Shaffer*
+
+사회 여러 영역과 삶의 곳곳에서 기술 사용이 증가하면서 인간의 행동과 상호작용에 관한 빅데이터의 양도 늘어나고 있다. 그러나 이러한 데이터의 양은 대개 너무 커서 인간이 해석하는 역량이나 전통적인 사회과학 연구 접근법의 한계를 넘어선다. 18장은 통계의 힘과 심층적인 민족지학적 접근을 결합하여, 대규모 질적 데이터를 통해 학습 행동을 이해하는 두 가지 양적 민족지학적 접근을 제시한다. 인식론적 네트워크 분석(ENA)과 순서 네트워크 분석(ONA)은 네트워크 데이터를 정량화하고 시각화하며 해석하는 두 가지 방법이다. 코딩된 데이터를 입력으로 삼아, ENA와 ONA는 각각 코드(예: 주제나 범주) 사이의 연관성을 무방향 또는 방향 가중 네트워크 모형으로 나타낸다. 두 기법 모두 코드 간 연관성의 강도를 측정하고, 네트워크 그래프를 통해 연결 구조를 보여주며, 시간에 따른 연결의 구성과 강도 변화를 정량화하고, 네트워크 간 비교를 가능하게 한다. 이 장은 두 방법에 대한 자세한 설명과 함께, R로 이를 구현하는 단계별 안내를 제공한다.
+
+### 심리계량학
+
+책은 심리계량학을 다루는 절로 마무리된다. 교육심리학 분야에서 심리계량학은 지능이나 적성 같은 심리적 구성 개념이 시험 점수 같은 관찰 가능한 변수와 어떻게 관련되는지를 연구하는 것을 목표로 한다. 전통적으로 교육심리학의 심리계량학적 방법은 검증된 설문지 형태의 도구에서 얻은 자기보고식 데이터에 의존해왔지만, 오늘날 연구자들은 디지털 데이터도 활용하기 시작했다. 여기서는 측정된 변수들 사이의 관계를 조사하고 이론과 가설을 검증하는 여러 기법, 즉 심리적 네트워크, 요인 분석, 구조방정식모형을 제시한다.
+
+**19장: 심리적 네트워크—학습과 복잡한 학습 과정 분석에 대한 현대적 접근** \[25\]
+
+*Mohammed Saqr, Emorie Beck, Sonsoles López-Pernas*
+
+교육 현장에서 일어나는 심리적 현상을 분석할 때는, 서로 상호작용하고 서로를 촉발하며 영향을 주고받는 수많은 변수가 관여한다. 변수들 사이의 이러한 의존 관계를 이해하려면 각 변수 쌍 사이의 선형적 관계만 분석하는 것으로는 부족하며, 오히려 이런 복잡성은 변수들 사이의 상호작용을 폭넓게 포착하는 더 정교한 방법, 즉 심리적 네트워크를 필요로 한다. 노드가 흔히 사람을 나타내고 엣지가 그들 사이의 상호작용이나 관계를 나타내는 사회 네트워크와 달리, 심리적 네트워크의 노드는 관찰된 심리적 변수를 나타내고 엣지는 그 변수들 사이의 통계적 관계를 나타낸다. 19장은 심리적 네트워크의 개념과, R을 이용한 추정, 시각화, 해석에 대한 튜토리얼을 제시하며 심리계량학적 방법을 다루는 절을 시작한다.
+
+**20장: R을 이용한 교육 연구에서 요인 분석** \[26\]
+
+*Leonie V. D. E. Vogelsmeier, Mohammed Saqr, Sonsoles López-Pernas, Joran Jongerling*
+
+20장은 많은 수의 변수를 더 적은 수의 요인으로 축소하는 데 쓰이는 방법인 요인 분석을 제시한다. 이 방법은 어떤 관찰 가능한 지표들이 직접 관찰되지 않는 잠재적 구성 개념을 대표하는지를 확인하는 데 흔히 쓰인다. 이는 교육 연구에서 학생 참여도 같은 잠재적 구성 개념을 평가하는 타당한 도구를 개발하는 데 핵심적인 단계다. 이 장은 요인 분석을 수행하는 두 가지 주요 접근법을 자세히 설명하고, 두 기법을 모두 구현하는 방법에 대한 튜토리얼을 제공한다. 첫 번째는 확인적 요인 분석(Confirmatory Factor Analysis, CFA)으로, 이는 더 이론 주도적인 접근법이며, 연구자가 기저에 있는 구성 개념의 수와 이러한 차원들과 관찰된 변수들 사이의 관계 패턴을 직접 명시한다. 두 번째는 탐색적 요인 분석(Exploratory Factor Analysis, EFA)으로, 이는 더 데이터 주도적인 접근법이며, 기저 구성 개념의 수를 데이터로부터 추론하고, 모든 기저 구성 개념이 (적어도 어느 정도는) 모든 관찰된 변수에 영향을 미친다고 가정한다.
+
+**21장: 교육 과학자를 위한 R을 이용한 구조방정식모형** \[27\]
+
+*Joran Jongerling, Sonsoles López-Pernas, Mohammed Saqr, Leonie V. D .E. Vogelsmeier*
+
+21장은 이 책의 마지막 방법인 구조방정식모형을 제시한다. 구조방정식모형은 잠재 변수와 관찰 가능한 지표들 사이의 수많은 관계, 그리고 이론을 검증하기 위한 잠재 변수들 사이의 관계를 모델링하는 데 적합하고 유용한 방법이다. 가장 흔한 형태에서 구조방정식모형은 (20장에서 다룬) 확인적 요인 분석과 경로 분석(Path Analysis)이라는 또 다른 방법을 결합한다. 확인적 요인 분석과 마찬가지로 구조방정식모형은 관찰된 변수를 그 변수들로 측정되는 잠재 변수와 연결하며, 경로 분석이 그렇듯 구조방정식모형은 (잠재 변수와 관찰된 변수를 포함한) 변수 집합들 사이의 다양한 회귀 유형 관계를 허용한다. 이 장은 구조방정식모형에 대한 입문, 교육 과학에 적합한 구조방정식모형 분석 수행을 위한 통합적 전략, 그리고 R로 구조방정식모형 분석을 수행하는 방법에 대한 튜토리얼을 제공한다.
+
+## 실습 코드와 데이터
+
+이 책에서 다루는 개념들을 학습하고 실제로 이해하는 경험을 높이기 위해, 우리는 각 장에 대응하는 실습 코드 저장소를 마련했다. 이 저장소에는 책의 각 장에서 다루는 여러 학습분석학 방법론을 어떻게 구현하는지 보여주는 단계별 튜토리얼에 포함된 모든 코드가 담겨 있다. 이 코드에는 복잡한 작업을 자동화하는 사용자 정의 함수도 포함되어 있어, 누구든 자신의 데이터셋에 이 기법들을 손쉽게 적용할 수 있다. 또한 이 코드는 독자가 결과와 통찰을 효과적으로 해석하고 전달하는 데 도움이 되는 시각화, 그래프, 플롯을 생성하는 방법도 안내한다. 동반 코드 저장소는 다음 주소에서 확인할 수 있다:
+
+<https://github.com/lamethods/code>
+
+코드와 함께, 우리는 교육적 상황을 대표하도록 정성껏 선별한 데이터셋 모음도 제공하는데, 이를 통해 독자는 이 책에서 다룬 기법들을(그리고 그 이상을) 직접 실험해볼 수 있다. 각 데이터셋에 대한 자세한 설명은 2장에서 확인할 수 있다.
+
+<https://github.com/lamethods/data>
+
+## 참고문헌
+
+1.  Conole G, Gašević D, Long P, Siemens G (2011) Message from the LAK 2011 general & program chairs. In: Proceedings of the 1st international conference on learning analytics and knowledge. ACM, Banff, Canada
+2.  Cornog J, Stoddard GD (1925) Predicting performance in chemistry. Journal of Chemical Education 2:701.
+3.  Platts CV, Wyant G (1969) Network analysis and the possibility of its use in education. Educational Review 21:109–119.
+4.  Pechenizkiy M, Trcka N, Vasilyeva E, Van der Aalst W, De Bra P (2009) Process mining online assessment data. ERIC Clearinghouse
+5.  Soller AL, Lesgold A (2003) A computational approach to analyzing online knowledge sharing interaction. In: Proceedings of Artificial Intelligence in Education
+6.  Wang F-H (2002) On analysis and modeling of student browsing behavior in web-based asynchronous learning environments. In: Advances in Web-Based Learning. Springer, pp 69–80
+7.  Adam K, Bakar NAA, Fakhreldin MAI, Majid MA (2018) Big data and learning analytics: A big potential to improve e-learning. Advanced Science Letters 24:7838–7843.
+8.  López-Pernas S, Saqr M, Conde J, Del-Río-Carazo L (2024) A broad collection of datasets for educational research training and application. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+9.  Tikka S, Kopra J, Heinäniemi M, López-Pernas S, Saqr M (2024) Getting started with R for education research. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+10. Kopra J, Tikka S, Heinäniemi M, López-Pernas S, Saqr M (2024) An R approach to data cleaning and wrangling for education research. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+11. Tikka S, Kopra J, Heinäniemi M, López-Pernas S, Saqr M (2024) Introductory statistics with R for educational researchers. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+12. López-Pernas S, Misiejuk K, Tikka S, Saqr M, Kopra J, Heinäniemi M (2024) Visualizing and reporting educational data with R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+13. Jovanovic J, López-Pernas S, Saqr M (2024) Predictive modelling in learning analytics using R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+14. Murphy K, López-Pernas S, Saqr M (2024) Dissimilarity-based cluster analysis of educational data. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+15. Scrucca L, Saqr M, López-Pernas S, Murphy K (2024) An introduction and R tutorial to model-based clustering in education via latent profile analysis. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+16. Saqr M, López-Pernas S, Helske S, Durand M, Murphy K, Studer M, Ritschard G (2024) Sequence analysis in education. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+17. López-Pernas S, Saqr M (2024) Modeling the dynamics of longitudinal processes in education: A tutorial with R for the VaSSTra method. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+18. Helske J, Helske S, Saqr M, López-Pernas S, Murphy K (2024) A modern approach to transition analysis and process mining with Markov models in education. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+19. López-Pernas S, Saqr M, Helske S, Murphy K (2024) Multichannel sequence analysis in educational research using R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+20. López-Pernas S, Saqr M (2024) The why, the how, and the when of educational process mining in R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+21. Saqr M, López-Pernas S, Conde MÁ, Hernández-García Á (2024) Social network analysis: A primer, a guide and a tutorial in R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+22. Hernández-García Á, Cuenca-Enrique C, Traxler A, López-Pernas S, Conde MÁ, Saqr M (2024) Community detection in learning networks using R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+23. Saqr M (2024) Temporal network analysis: Introduction, methods, and analysis with R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+24. Tan Y, Swiecki Z, Ruis A, Shaffer D (2024) Epistemic network analysis and ordered network analysis in learning analytics. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+25. Saqr M, Beck E, López-Pernas S (2024) Psychological networks. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+26. Vogelsmeier LVDE, Saqr M, López-Pernas S, Jongerling J (2024) Factor analysis in education research using R. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
+27. Jongerling J, López-Pernas S, Saqr M, Vogelsmeier LV (2024) Structural equation modeling with R for education scientists. In: Saqr M, López-Pernas S (eds) Learning Analytics Methods and Tutorials. Springer
