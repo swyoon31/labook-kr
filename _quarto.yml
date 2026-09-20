@@ -3,23 +3,23 @@ project:
 
 book:
   title: "학습분석학 방법론과 지침서"
-  translator: "윤상원"
-  date: "2026. 9. 20."
+  subtitle: "R을 활용한 실전 가이드"
+  cover-image: cover.png
+  navbar:
+    left:
+      - text: "홈"
+        href: index.qmd
+      - text: "학습분석학 방법론과 지침서"
+        href: index.qmd
+      - text: "고급 학습분석학 방법론"
+        href: "https://swyoon31.github.io/alabook-kr/"   # 2권 작업 시작하면 연결
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - part: "시작하기"
+      chapters:
+        - chapters/개관.qmd
+        - chapters/데이터.qmd
+    - part: "머신러닝"
+      chapters:
+        - chapters/예측 모델링.qmd
     - references.qmd
-
-bibliography: references.bib
-
-format:
-  html:
-    theme:
-      - cosmo
-      - brand
-  pdf:
-    documentclass: scrreprt
-
-
-

@@ -1,5 +1,22 @@
-# Preface {.unnumbered}
+---
+title: "학습분석학 방법론과 지침서"
+---
 
-This is a Quarto book.
+:::: {.columns}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+::: {.column width="35%"}
+![](cover.png)
+:::
+
+::: {.column width="65%"}
+**원저자:** Mohammed Saqr, Sonsoles López-Pernas
+(University of Eastern Finland, Learning Analytics Unit)
+
+**원서:** *Learning Analytics Methods and Tutorials: A Practical Guide Using R* (Springer, 2024, Open Access)
+
+**한국어 번역:** 윤상원
+
+(여기에 책 소개 문단을 본인 번역 문체로 작성)
+:::
+
+::::
