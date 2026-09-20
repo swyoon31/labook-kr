@@ -13,37 +13,37 @@
   {
     "objectID": "chapters/개관.html",
     "href": "chapters/개관.html",
-    "title": "2  Introduction",
+    "title": "2  개관",
     "section": "",
     "text": "This is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming.",
     "crumbs": [
       "홈",
       "시작하기",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>개관</span>"
     ]
   },
   {
     "objectID": "chapters/데이터.html",
     "href": "chapters/데이터.html",
-    "title": "3  Summary",
+    "title": "3  데이터",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
       "홈",
       "시작하기",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>데이터</span>"
     ]
   },
   {
     "objectID": "chapters/예측 모델링.html",
     "href": "chapters/예측 모델링.html",
-    "title": "4  Introduction",
+    "title": "4  예측 모델링",
     "section": "",
     "text": "This is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming.",
     "crumbs": [
       "홈",
       "머신러닝",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>예측 모델링</span>"
     ]
   }
 ]
