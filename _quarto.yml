@@ -11,7 +11,11 @@ book:
       - text: "학습분석학 방법론과 지침서"
         href: index.qmd
       - text: "고급 학습분석학 방법론"
-        href: "https://swyoon31.github.io/alabook-kr/"   # 2권 작업 시작하면 연결
+        href: "https://swyoon31.github.io/alabook-kr/"
+    right:
+      - icon: github
+        href: https://github.com/swyoon31/labook-kr
+        aria-label: GitHub 저장소
   chapters:
     - index.qmd
     - part: "시작하기"
@@ -26,5 +30,6 @@ book:
 format:
   html:
     theme: cosmo
+    css: styles.css
   epub:
     cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
