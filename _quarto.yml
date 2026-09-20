@@ -36,3 +36,4 @@ format:
     css: styles.css
   epub:
     cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
+    prefer-html: true       # 인터랙티브 표(paged_table 등)는 EPUB에서 안 보이지만, 렌더 에러는 방지
