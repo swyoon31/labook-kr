@@ -20,11 +20,14 @@ book:
     - index.qmd
     - part: "시작하기"
       chapters:
-        - chapters/개관.qmd
-        - chapters/데이터.qmd
+        - href: chapters/개관.qmd
+          text: "개관"
+        - href: chapters/데이터.qmd
+          text: "데이터"
     - part: "머신러닝"
       chapters:
-        - chapters/예측 모델링.qmd
+        - href: chapters/예측모델링.qmd
+          text: "예측모델링"
     - references.qmd
 
 format:
