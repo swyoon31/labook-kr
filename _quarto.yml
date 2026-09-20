@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: "."
-  author: "Norah Jones"
+  title: "학습분석학 방법론과 지침서"
+  translator: "윤상원"
   date: "2026. 9. 20."
   chapters:
     - index.qmd
