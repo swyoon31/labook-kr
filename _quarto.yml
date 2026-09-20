@@ -4,7 +4,6 @@ project:
 book:
   title: "학습분석학 방법론과 지침서"
   subtitle: "R을 활용한 실전 가이드"
-  cover-image: cover.png
   navbar:
     left:
       - text: "홈"
@@ -23,3 +22,9 @@ book:
       chapters:
         - chapters/예측 모델링.qmd
     - references.qmd
+
+format:
+  html:
+    theme: cosmo
+  epub:
+    cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
