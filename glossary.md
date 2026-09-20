@@ -35,6 +35,13 @@
 | 커뮤니티 탐지 | Community Detection | "커뮤니티 탐색" 금지 |
 | 중심성 | Centrality | |
 | 매개 중심성 | Betweenness Centrality | |
+| 고유벡터 중심성 | Eigenvector Centrality | 2장에서 신규 등장 |
+| 근접 중심성 | Closeness Centrality | 2장에서 신규 등장 |
+| 내향 중심성 | In-degree Centrality | 2장에서 신규 등장 |
+| 외향 중심성 | Out-degree Centrality | 2장에서 신규 등장 |
+| 코어니스 중심성 | Coreness Centrality | 2장에서 신규 등장 |
+| 확산도 중심성 | Diffusion Degree Centrality | 2장에서 신규 등장 |
+| 교차 클리크 연결성 | Cross-clique Connectivity | 2장에서 신규 등장 |
 | 예측 모델링 | Predictive Modeling | |
 | 군집화 | Clustering | "군집 분석"은 지양 |
 | 비유사도 기반 군집화 | Dissimilarity-based Clustering | |
@@ -43,6 +50,16 @@
 | 병합적 계층 군집화 | Agglomerative Hierarchical Clustering | |
 | 유한 가우스 혼합 모형 | Finite Gaussian Mixture Model | 어순 고정 |
 | 잠재 프로파일 분석 | Latent Profile Analysis | |
+| 잠재 계층 분석 | Latent Class Analysis (LCA) | 2장에서 신규 등장; 잠재 프로파일 분석(LPA)과 별개 기법 |
+| 맥락 데이터 | Contextual Data | 2장에서 신규 등장 |
+| 자기보고식 데이터 | Self-Reported Data | 2장에서 신규 등장 |
+| 활동 데이터 | Activity Data | 2장에서 신규 등장 |
+| 사회적 상호작용 데이터 | Social Interaction Data | 2장에서 신규 등장 |
+| 수행 데이터 | Performance Data | 2장에서 신규 등장 |
+| 텍스트 마이닝 | Text Mining | 2장에서 신규 등장 |
+| 다중모드 학습분석학 | Multimodal Learning Analytics | 2장에서 신규 등장 |
+| 청중 응답 시스템 | Audience Response System (ARS) | 2장에서 신규 등장 |
+| 편의 표집 | Convenience Sampling | 2장에서 신규 등장 |
 
 ## 일반 용어
 
@@ -54,3 +71,7 @@
 | 데이터 다루기 | Data Wrangling | |
 | 정돈된 데이터 | Tidy Data | |
 | 기술통계 | Descriptive Statistics | |
+| 노드 | Nodes | 2장에서 신규 등장 |
+| 엣지 | Edges | 2장에서 신규 등장 |
+| 리커트 척도 | Likert Scale | 2장에서 신규 등장 |
+| 섀넌 엔트로피 | Shannon Entropy | 2장에서 신규 등장 |
