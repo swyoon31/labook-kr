@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# 학습분석학 방법론과 지침서 {.unnumbered}
+# 학습분석학 방법론 {.unnumbered}
 
 :::: {.columns}
 
