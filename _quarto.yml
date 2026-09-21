@@ -17,7 +17,8 @@ book:
         href: https://github.com/swyoon31/labook-kr
         aria-label: GitHub 저장소
   chapters:
-    - index.qmd
+    - href: index.qmd
+      text: "학습분서학 방법론과 실제"
     - part: "시작하기"
       chapters:
         - href: chapters/입문.qmd
