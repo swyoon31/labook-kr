@@ -18,7 +18,6 @@ book:
         aria-label: GitHub 저장소
   chapters:
     - href: index.qmd
-      text: "학습분석학 방법론과 실제"
     - part: "시작하기"
       chapters:
         - href: chapters/입문.qmd
