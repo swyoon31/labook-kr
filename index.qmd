@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# 학습분석학 방법론과 실제 {.unnumbered .hidden-h1}
+# 학습분석학 방법론과 실제 {.unnumbered}
 
 :::: {.columns}
 
