@@ -18,10 +18,10 @@ book:
         aria-label: GitHub 저장소
   chapters:
     - index.qmd
-    - href: chapters/입문.qmd
-      text: "입문"
     - part: "시작하기"
       chapters:
+        - href: chapters/입문.qmd
+          text: "입문"
         - href: chapters/데이터.qmd
           text: "데이터"
         - href: chapters/R기초.qmd
