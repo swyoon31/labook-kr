@@ -18,16 +18,60 @@ book:
         aria-label: GitHub 저장소
   chapters:
     - index.qmd
+    - href: chapters/입문.qmd
+      text: "입문"
     - part: "시작하기"
       chapters:
-        - href: chapters/입문.qmd
-          text: "입문"
         - href: chapters/데이터.qmd
           text: "데이터"
+        - href: chapters/R기초.qmd
+          text: "R기초"
+        - href: chapters/데이터정제.qmd
+          text: "데이터정제"
+        - href: chapters/기초통계.qmd
+          text: "기초통계"
+        - href: chapters/데이터시각화.qmd
+          text: "데이터시각화"
     - part: "머신러닝"
       chapters:
         - href: chapters/예측모델링.qmd
           text: "예측모델링"
+        - href: chapters/비유사도기반군집화.qmd
+          text: "비유사도기반군집화"
+        - href: chapters/모형기반군집화.qmd
+          text: "모형기반군집화"
+    - part: "시간적방법론"
+      chapters:
+        - href: chapters/순차분석.qmd
+          text: "순차분석"
+        - href: chapters/VaSSTra.qmd
+          text: "VaSSTra"
+        - href: chapters/마르코프모형.qmd
+          text: "마르코프모형"
+        - href: chapters/다채널순차분석.qmd
+          text: "다채널순차분석"
+        - href: chapters/프로세스마이닝.qmd
+          text: "프로세스마이닝"
+    - part: "네트워크분석"
+      chapters:
+        - href: chapters/사회네트워크분석.qmd
+          text: "사회네트워크분석"
+        - href: chapters/커뮤니티탐지.qmd
+          text: "커뮤니티탐지"
+        - href: chapters/시간적네트워크.qmd
+          text: "시간적네트워크"
+        - href: chapters/인식론적네트워크분석.qmd
+          text: "인식론적네트워크분석"
+    - part: "심리계량학"
+      chapters:
+        - href: chapters/심리적네트워크.qmd
+          text: "심리적네트워크"
+        - href: chapters/요인분석.qmd
+          text: "요인분석"
+        - href: chapters/구조방정식모형.qmd
+          text: "구조방정식모형"
+    - href: chapters/학습분석학의미래.qmd
+      text: "학습분석학의미래"
     - references.qmd
 
 format:
