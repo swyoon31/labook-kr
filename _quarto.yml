@@ -78,6 +78,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    tbl-cap-location: top # 표 제목 위치를 위로 설정
   # epub:
   #   cover-image: cover.png   # EPUB을 만들 때만 표지로 사용됨
   #   prefer-html: true
