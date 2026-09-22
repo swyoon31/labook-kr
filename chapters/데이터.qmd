@@ -7,6 +7,7 @@
 :::
 
 ```{r, include=F}
+options(lifecycle_verbosity = "quiet")
 library(dplyr)
 library(ggplot2)
 library(reshape2)
@@ -573,7 +574,7 @@ filtered_srl <- srl %>%
 ```
 
 ```{r, results="asis", echo=F}
-options(scipen=999999999)
+options(scipen=999)
 # Check if its z-score they do not include that information in the paper nor the dataset
 summary_df(filtered_srl, explanations = list(
   c("학교 내 학생 식별자", "character"),
