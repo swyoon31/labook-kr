@@ -13,3 +13,16 @@
 #title-block-header {
   margin-bottom: 0.5rem;
 }
+
+/* 표 캡션: 표 위쪽, 왼쪽 정렬 */
+.table caption,
+caption {
+  caption-side: top !important;
+  text-align: left !important;
+}
+
+/* 그림 캡션: 그림 아래쪽, 왼쪽 정렬 */
+figcaption,
+.figure-caption {
+  text-align: left !important;
+}
