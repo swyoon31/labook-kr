@@ -113,7 +113,7 @@ rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-logs
-#| tbl-cap: "Preview of the LA course Moodle Events dataset"
+#| tbl-cap: "학습분석학 강좌 Moodle 이벤트 데이터셋 미리보기"
 moodle = rio::import("https://github.com/lamethods/data/raw/main/1_moodleLAcourse/Events.xlsx")
 rownames(moodle) <- NULL
 gt::gt_preview(moodle |> select(-Log))
@@ -162,7 +162,7 @@ rmarkdown::paged_table(Demographics, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-demo
-#| tbl-cap: "Preview of the LA course Demographic dataset"
+#| tbl-cap: "학습분석학 강좌 인구통계 데이터셋 미리보기"
 gt::gt_preview(Demographics)
 ```
 
@@ -206,7 +206,7 @@ c("강좌 최종 성적(0~10)", NULL)
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-results
-#| tbl-cap: "Preview of the LA course Results (grades) dataset"
+#| tbl-cap: "학습분석학 강좌 성적 데이터셋 미리보기"
 Results2 <- Results
 names(Results2) <- str_replace(names(Results2), "Grade.", "")
 gt::gt_preview(Results2)
@@ -219,7 +219,7 @@ gt::gt_preview(Results2)
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(Results, options=list( rows.print=5 ))
 ```
-```{r, echo = F, fig.cap="Grade per student and graded item",fig.width= 6, fig.height= 3}
+```{r, echo = F, fig.cap="학생별·채점 항목별 성적",fig.width= 6, fig.height= 3}
 #| label: fig-grades-la
   Results %>% pivot_longer(2:15)  %>% ggplot(aes(y = name, x=value) ) +
   geom_boxplot( fill = "turquoise", outlier.alpha = 0.2) +
@@ -261,7 +261,7 @@ summary_df(AllCombined |> select(contains("Frequency."), "AchievingGroup"),
 rmarkdown::paged_table(AllCombined , options = list(rows.print = 5))
 ```
 
-```{r, echo = F, fig.cap="Relationship between total frequency of events and final grade",fig.width= 6, fig.height=5}
+```{r, echo = F, fig.cap="전체 이벤트 빈도와 최종 성적 사이의 관계",fig.width= 6, fig.height=5}
 #| label: fig-scatter-la
 ggplot(AllCombined, aes(x=Frequency.Total, y = Final_grade)) + geom_point(size=1.4, fill = "turquoise", color = "black", shape = 21) + theme_minimal() +
   xlab("Total frequency of events") + ylab("Final grade")
@@ -274,7 +274,7 @@ ggplot(AllCombined, aes(x=Frequency.Total, y = Final_grade)) + geom_point(size=1
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-combined
-#| tbl-cap: "Preview of the LA course combined dataset"
+#| tbl-cap: "학습분석학 강좌 통합 데이터셋 미리보기"
 
 AllC2 <- AllCombined |> select(contains("Frequency."),AchievingGroup)
 names(AllC2) <- str_replace(names(AllC2), pattern = "Frequency.", replacement = "F.")
@@ -344,7 +344,7 @@ rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobil
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-kms-oman
-#| tbl-cap: "Preview of the Higher Education Institution Academic data"
+#| tbl-cap: "고등교육기관 학사 데이터 미리보기"
 gt::gt_preview(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed))
 ```
 
@@ -390,7 +390,7 @@ rmarkdown::paged_table(moodle, options = list( rows.print = 5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-oman
-#| tbl-cap: "Preview of the Higher Education Institution Moodle data"
+#| tbl-cap: "고등교육기관 Moodle 데이터 미리보기"
 gt::gt_preview(moodle |> select(-Description) |>  select(-`Affected user`) |> select(-`User full name`)  |> select(-`IP address`) |> select(-`Origin`) )
 ```
 
@@ -441,7 +441,7 @@ rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-activity-oman
-#| tbl-cap: "Preview of the Higher Education Institution Activity data"
+#| tbl-cap: "고등교육기관 활동 데이터 미리보기"
 gt::gt_preview(activity %>% select(-ApplicantName))
 ```
 
@@ -484,7 +484,7 @@ rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numer
 ```
 ```{r eval=knitr::is_latex_output(), echo = FALSE, warning = FALSE}
 #| label: tbl-results-oman
-#| tbl-cap: "Preview of the Higher Education Institution grade data"
+#| tbl-cap: "고등교육기관 성적 데이터 미리보기"
 gt::gt_preview(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)))
 ```
 
@@ -527,7 +527,7 @@ rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print
 
 ```{r eval=knitr::is_latex_output(), echo = FALSE, warning = FALSE}
 #| label: tbl-vl-oman
-#| tbl-cap: "Preview of the Higher Education Institution eDify data"
+#| tbl-cap: "고등교육기관 eDify 데이터 미리보기"
 gt::gt_preview(vl %>% select(-ApplicantName))
 ```
 
@@ -608,7 +608,7 @@ rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
 
 ```{r eval=knitr::is_latex_output(), echo=F}
 #| label: tbl-spanish-survey
-#| tbl-cap: "Preview of the School Engagement, Academic Achievement, and SRL data"
+#| tbl-cap: "학교 참여도, 학업 성취, 자기조절학습(SRL) 데이터 미리보기"
 
 gt::gt_preview(filtered_srl |>  select(1:13))
 ```
@@ -626,7 +626,7 @@ filtered_srl_melt <- melt(filtered_srl_plot, variable.name = "subject", value.na
 
 ```{r, echo = F, fig.width= 6, fig.height= 4}
 #| label: fig-srl-grades
-#| fig-cap: Self-reported grades of students in Mathematics and Spanish
+#| fig-cap: 수학과 스페인어 과목에서 학생들의 자기보고식 성적
 
 ggplot(filtered_srl_melt, aes(y = subject, fill = forcats::fct_rev(as.character(grade)))) + geom_bar(stat="count", color = "black", position="dodge") + ylab("Subject") + xlab("Number of students") + labs(fill ="Grade") + theme_minimal() + scale_fill_brewer(direction=-1,palette = "RdBu")
 ```
@@ -637,7 +637,7 @@ ggplot(filtered_srl_melt, aes(y = subject, fill = forcats::fct_rev(as.character(
 ```{r, echo=F, fig.width= 6, fig.height= 3}
 #| label: fig-hist-engagement-engagement
 #| layout-ncol: 3
-#| fig-cap: School engagement results of the survey
+#| fig-cap: 설문조사의 학교 참여도 결과
 #| fig-subcap:
 #|  - "Emotion engagement z-score"
 #|  - "Cognitive engagement z-score"
@@ -652,7 +652,7 @@ ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Behavior_Engage)))) + g
 ```{r, echo=F, fig.width= 8, fig.height= 4}
 #| label: fig-hist-selfregulation-engagement
 #| layout-ncol: 2
-#| fig-cap: Self-regulation results of the survey
+#| fig-cap: 설문조사의 자기조절 결과
 #| fig-subcap:
 #|  - "Environment management z-score"
 #|  - "Information help management z-score"
@@ -740,7 +740,7 @@ rmarkdown::paged_table(survey, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-burnout-survey-data
-#| tbl-cap: "Preview of the burnout survey data answers"
+#| tbl-cap: "소진 설문조사 응답 데이터 미리보기"
 survey = rio::import("https://github.com/lamethods/data/raw/main/4_teachersBurnout/2.%20Response.xlsx")
 rownames(survey) <- NULL
 gt::gt_preview(survey)
@@ -753,7 +753,7 @@ gt::gt_preview(survey)
 
 ```{r, echo=F, fig.width= 4, fig.height= 4}
 #| label: fig-burnout-likert
-#| fig-cap: Results of the burnout survey
+#| fig-cap: 소진 설문조사 결과
 
 for (col_name in colnames(survey)) {
   survey[[col_name]] <- factor(survey[[col_name]], levels = 1:5)
@@ -848,7 +848,7 @@ summary_df(sawses_demographic," +",  explanations = list(
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-sawses-demographic
-#| tbl-cap: "Preview of the SAWSES demographic data"
+#| tbl-cap: "SAWSES 인구통계 데이터 미리보기"
 gt::gt_preview(sawses_demographic)
 ```
 
@@ -905,7 +905,7 @@ rmarkdown::paged_table(sawses_questionary, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-sawses-sawses_questionary
-#| tbl-cap: "Preview of the SAWSES questionnaire responses"
+#| tbl-cap: "SAWSES 설문 응답 미리보기"
 gt::gt_preview(sawses_questionary)
 ```
 
@@ -915,7 +915,7 @@ gt::gt_preview(sawses_questionary)
 
 ```{r, echo=F, fig.width= 6, fig.height= 4}
 #| label: fig-survey-writing
-#| fig-cap: Results of the SAWSES survey
+#| fig-cap: SAWSES 설문조사 결과
 
 questions_labels <- c(
     "overcoming difficulties",
@@ -974,8 +974,6 @@ rownames(interaction_elements) <- NULL
 ```
 
 -   **엣지(Edges) 파일**: 이 파일은 누가(소통의 출처 또는 발신자) 누구와(소통의 대상 또는 수신자) 상호작용했는지를 정의한다. 엣지 파일에는 시간, 토론 주제, 그룹과 같은 추가적인 메타데이터도 함께 제공된다. 아래는 엣지 파일 중 하나의 미리보기이며, @fig-mooc-all-nodes 는 포럼 기여자들 사이의 협업 네트워크를 보여준다.
-
-
 ```{r, results="asis", echo=FALSE}
 summary_df(interaction_elements_filtered, " +", explanations = list(
   c("발신자(소통의 출처) 식별자(1~445)", "character"),
@@ -997,7 +995,7 @@ rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print=5
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-edges
-#| tbl-cap: "Preview of the MOOC for educators discussion data (edges)"
+#| tbl-cap: "교육자 대상 MOOC 토론 데이터 미리보기(엣지)"
 gt::gt_preview(interaction_elements_filtered)
 ```
 
@@ -1007,7 +1005,7 @@ gt::gt_preview(interaction_elements_filtered)
 
 ```{r, fig.width=5, fig.height=5, echo=F, warning=F, message=F}
 #| label: fig-mooc-all-nodes
-#| fig-cap: MOOC participants' network
+#| fig-cap: MOOC 참여자 네트워크
 par(mar=c(0,0,0,0))
 
 weighted <- interaction_elements_filtered  %>% group_by(Sender, Receiver) %>%
@@ -1024,7 +1022,6 @@ plot(g3, edge.width = graph3_df$weight/5,  edge.arrow.size = graph3_df$weight/35
 
 
 -   **노드(Nodes) 파일**: 이 파일은 상호작용하는 교사들의 특성, 즉 ID, 직무 상태, 전문성 수준을 정의한다. 아래는 노드 파일 데이터 중 하나의 미리보기이다.
-
 ```{r, include=F}
 nodes = rio::import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/DLT1%20Nodes.csv")
 rownames(nodes) <- NULL
@@ -1054,7 +1051,7 @@ rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-nodes
-#| tbl-cap: "Preview of the MOOC for educators discussion data (nodes)"
+#| tbl-cap: "교육자 대상 MOOC 토론 데이터 미리보기(노드)"
 gt::gt_preview(nodes)
 ```
 
@@ -1064,14 +1061,11 @@ gt::gt_preview(nodes)
 
 
 -   **중심성(Centralities) 파일**: 이 파일은 참여자들의 기여 횟수(`OutDegree`), 답글 수(`InDegree`), 네트워크 내 위치(`Closeness_total`), 연결의 가치(`Eigen`), 아이디어의 확산 정도(`Diffusion_degree`) 등을 나타내는 중심성 지표를 담고 있다. 상호작용 데이터로부터 중심성을 계산하는 방법에 대한 자세한 내용은 15장을 참고하라 \[39\].
-
 ```{r, include=F}
 snamooccent = rio::import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/Centralities.csv")
 rownames(snamooccent) <- NULL
 names(snamooccent)
 ```
-
-
  +  **name**: 교사 식별자(1~445).
  +  **InDegree**: 내향 중심성(In-degree Centrality). 받은 답글 수.
  +  **OutDegree**: 외향 중심성(Out-degree Centrality). 보낸 메시지 수.
@@ -1094,7 +1088,7 @@ rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-cent
-#| tbl-cap: "Preview of the MOOC for educators discussion data (nodes)"
+#| tbl-cap: "교육자 대상 MOOC 토론 데이터 미리보기(노드)"
 gt::gt_preview(snamooccent)
 ```
 
@@ -1119,7 +1113,7 @@ gt::gt_preview(snamooccent)
 
 ```{r, echo=F, fig.width= 8, fig.height= 8, include = F}
 #| label: fig-sna-mooc-educators
-#| fig-cap: MOOC Network
+#| fig-cap: MOOC 네트워크
 #| layout-ncol: 2
 #| fig-subcap:
 #|  - "Most active links in the network"
@@ -1159,7 +1153,6 @@ gt::gt_preview(snamooccent)
 이 데이터셋은 사회 네트워크 분석을 이용해 분석되었으며, 한 논문에서 간략히 소개되었고 \[77\], Creative Commons CC BY 4.0 라이선스로 공유되는데, 이는 적절한 출처 표시를 하는 한 누구나 이 데이터셋을 공유, 복제, 수정할 수 있음을 의미한다. 이 데이터셋에는 아래에서 설명하는 두 개의 파일이 포함되어 있다.
 
 -   **엣지 파일**: 이 파일에는 상호작용의 출처, 대상, 가중치가 담겨 있다. 아래는 엣지 파일의 미리보기이다.  @fig-kenitra-all-nodes 는 네트워크상의 모든 상호작용에 대한 그래프를 보여준다.
-
 ```{r, include=F}
 interaction_elementss = rio::import("https://raw.githubusercontent.com/lamethods/data/main/7_snaHS/interaction.csv")
 rownames(interaction_elementss) <- NULL
@@ -1180,7 +1173,7 @@ summary_df(interaction_elementss, " +", explanations = list(
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-hs-edges
-#| tbl-cap: "Preview of the High school learners' interactions data (edges)"
+#| tbl-cap: "고등학생 학습자 상호작용 데이터 미리보기(엣지)"
 
 gt::gt_preview(interaction_elementss)
 ```
@@ -1195,7 +1188,7 @@ rmarkdown::paged_table(interaction_elementss, options=list( rows.print=5 ))
 
 ```{r, fig.width=6, fig.height=5, echo=F, warning=F, message=F}
 #| label: fig-kenitra-all-nodes
-#| fig-cap: High school learners' network
+#| fig-cap: 고등학생 학습자 네트워크
 par(mar=c(0,0,0,0))
 
 weighted <- interaction_elementss %>% group_by(source, Target) %>%
@@ -1211,7 +1204,6 @@ plot(g3,  vertex.color = "turquoise",  vertex.label.color = "black",
 ```
 
 -   **노드 파일**: 상호작용하는 학생들의 특성, 예컨대 성별과 나이를 담고 있다. 아래는 데이터셋의 미리보기이다.
-
 ```{r, include = F}
 nodes = rio::import("https://raw.githubusercontent.com/lamethods/data/main/7_snaHS/node.csv")
 rownames(nodes) <- NULL
@@ -1243,7 +1235,7 @@ summary_df(nodes_filtered, " +", explanations = list(
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-hs-nodes
-#| tbl-cap: "Preview of the High school learners' interactions data (nodes)"
+#| tbl-cap: "고등학생 학습자 상호작용 데이터 미리보기(노드)"
 gt::gt_preview(nodes_filtered)
 ```
 
@@ -1269,7 +1261,7 @@ rmarkdown::paged_table(nodes_filtered, options=list( rows.print=5 ))
 
 ```{r, echo=F, fig.width= 10, fig.height= 5, include=FALSE}
 #| label: fig-sna-kenitra
-#| fig-cap: Most repeated interactions in Kenitra's network
+#| fig-cap: 케니트라 네트워크에서 가장 반복적인 상호작용
 # most_active_node <- as.integer(most_active_nodes$source[1])
 # graph1_df <- most_active_links %>% select("source", "Target", "weight")
 # min_value <- min(most_active_links$weight)
@@ -1339,8 +1331,6 @@ rownames(edgess) <- NULL
 ```
 
 -   **엣지 파일**: 이 파일에는 누가(속성 `source`) 누구와(답글을 보낸 대상, 속성 `target`) 상호작용했는지, 다시 말해 정보 교환의 발신자와 수신자, 그리고 강좌 진행 동안 오간 모든 메시지를 고려했을 때 그러한 교환이 몇 번 일어났는지(속성 `weight`)에 대한 정보가 담겨 있다. 이 데이터셋에는 총 662개의 가중 엣지가 포함되어 있다. 아래는 엣지 파일 데이터의 미리보기이며, @fig-sna-moodle 은 Moodle 사용자들 사이의 전체 상호작용 네트워크를 나타낸다.
-
-
 ```{r, results="asis", echo=FALSE}
 summary_df(edgess, " +", explanations = list(
   c("출발 노드 식별자(108개의 서로 다른 값)", "character"),
@@ -1360,7 +1350,7 @@ rmarkdown::paged_table(edgess, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-prog-edges
-#| tbl-cap: "Preview of the programming course interaction data (edges)"
+#| tbl-cap: "프로그래밍 강좌 상호작용 데이터 미리보기(엣지)"
 gt::gt_preview(edgess)
 ```
 
@@ -1376,9 +1366,6 @@ nodess_filtered <- nodess[, -which(names(nodess) == "Id")]
 
 
 -   **노드 파일**: 이 파일에는 학생, 강사, 관리자를 포함하여 Moodle 공간에서 강좌에 접근 권한을 가진 모든 사용자에 대한 정보가 담겨 있다. 이 파일에는 총 124개의 노드(사용자)가 포함되어 있으며, 이 중 110명은 학생으로 각각 5~7명으로 구성된 19개 그룹에 분산되어 있다. 이 파일에는 각 사용자의 식별자(속성 `id`), 사용자명(속성 `user`; 익명화 이후 모든 사용자명은 `user_id` 형식을 취한다), 스레드 내 첫 게시물 수를 나타내는 최초 게시물 수(속성 `initPosts`), 다른 게시물에 대한 답글이었던 게시물 수를 나타내는 답글 수(속성 `replyPosts`), 그리고 포럼에서 해당 사용자가 작성한 전체 게시물 수(속성 `totalPosts`, `initPosts`와 `replyPosts`의 합)가 포함되어 있다. 네트워크의 중심 노드인 `user_55`는 강좌의 주강사에 해당한다는 점이 주목할 만하다. 아래는 노드 파일의 미리보기이다.
-
-
-
 ```{r, results="asis", echo=FALSE}
 summary_df(nodess_filtered , " +", explanations = list(
   c("사용자 식별자. 124명의 서로 다른 사용자", "character"),
@@ -1399,7 +1386,7 @@ rmarkdown::paged_table(nodess, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-prog-nodes
-#| tbl-cap: "Preview of the programming course interaction data (nodes)"
+#| tbl-cap: "프로그래밍 강좌 상호작용 데이터 미리보기(노드)"
 gt::gt_preview(nodess)
 ```
 
@@ -1437,7 +1424,7 @@ gt::gt_preview(nodess)
 
 ```{r, echo=F, fig.width= 15, fig.height= 15}
 #| label: fig-sna-moodle
-#| fig-cap: Interactions of the users in the Moodle discussion forum
+#| fig-cap: Moodle 토론 포럼 내 사용자들의 상호작용
 
 par(mar=c(0,0,0,0))
 graph1_df <- edgess#[most_active_links$source %in% most_active_nodes_filtered | most_active_links$target %in% most_active_nodes_filtered, ] %>% select("source", "target", "weight")
@@ -1511,7 +1498,7 @@ rmarkdown::paged_table(lgeng, options=list( rows.print = 5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-lgeng-preview
-#| tbl-cap: "Preview of engagement indicators and final grades throughout the eight courses"
+#| tbl-cap: "8개 강좌 전반의 참여도 지표와 최종 성적 미리보기"
 gt::gt_preview(lgeng2)
 ```
 
@@ -1521,7 +1508,7 @@ gt::gt_preview(lgeng2)
 
 ```{r, fig.width=10, fig.height=6, echo = F, warning=F, message=F}
 #| label: fig-engindi
-#| fig-cap: Histogram of engagement indicators and final grade throughout the eight courses
+#| fig-cap: 8개 강좌 전반의 참여도 지표와 최종 성적 히스토그램
 
 panel.hist <- function(x, ...) {
     usr <- par("usr")
@@ -1579,7 +1566,7 @@ rmarkdown::paged_table(engach, options=list( rows.print = 5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-engach-preview
-#| tbl-cap: "Preview of the dataset about engagement and achievement throughout the eight courses"
+#| tbl-cap: "8개 강좌 전반의 참여도와 성취 데이터셋 미리보기"
 gt::gt_preview(engach)
 ```
 
@@ -1589,7 +1576,7 @@ gt::gt_preview(engach)
 
 ```{r, echo = F, fig.width=8, fig.height=3}
 #| label: fig-engach
-#| fig-cap: Sequence and engagement for each student across eight courses
+#| fig-cap: 8개 강좌에 걸친 학생별 순서와 참여도
 library(patchwork)
 eng <- engach %>% mutate(UserID=as.numeric(as.factor(UserID))) %>% ggplot(aes(fill=Engagement)) + geom_rect(aes(xmin = Sequence-0.5, xmax=Sequence+0.5, ymin = UserID - 0.5, ymax = UserID + 0.5)) + scale_fill_manual(values=c("#2B6A00","#f9c22e","#E01A4F")) + theme_minimal() +
   theme(panel.grid = element_blank(), axis.text.y = element_blank(), legend.position = "bottom") +
@@ -1677,7 +1664,7 @@ rmarkdown::paged_table(covid_filtered, options=list( rows.print=5 ))
 ```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-covid-survey-preview
-#| tbl-cap: "Preview of the COVID-19 well-being survey data"
+#| tbl-cap: "코로나19 웰빙 설문조사 데이터 미리보기"
 gt::gt_preview(covid_filtered)
 ```
 
@@ -1688,7 +1675,7 @@ gt::gt_preview(covid_filtered)
 
 ```{r, echo=F, fig.width= 4, fig.height= 3}
 #| label: fig-covid-likert
-#| fig-cap: Results of COVID-19 well-being survey
+#| fig-cap: 코로나19 웰빙 설문조사 결과
 covid_filtered_survey = covid_filtered[,4:21]
 for (col_name in colnames(covid_filtered_survey)) {
   covid_filtered_survey[[col_name]] <- factor(covid_filtered_survey[[col_name]], levels = 1:5)
