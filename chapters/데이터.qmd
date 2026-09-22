@@ -102,10 +102,6 @@ summary_df(moodle |> mutate(timecreated = as.character(timecreated)) |> select(-
 
 
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -121,6 +117,10 @@ gt::gt_preview(moodle |> select(-Log))
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print=5 ))
 ```
 
 ```{r, echo = F, fig.width= 6, fig.height= 3}
@@ -151,10 +151,6 @@ summary_df(Demographics, explanations = list(
   ), ignore = c(T,T,T,T,T,T,F,F))
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(Demographics, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{6pt}{8pt}\selectfont
@@ -168,6 +164,10 @@ gt::gt_preview(Demographics)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(Demographics, options=list( rows.print=5 ))
 ```
 
 #### 성적
@@ -257,16 +257,6 @@ summary_df(AllCombined |> select(contains("Frequency."), "AchievingGroup"),
 ))
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(AllCombined , options = list(rows.print = 5))
-```
-
-```{r, echo = F, fig.cap="전체 이벤트 빈도와 최종 성적 사이의 관계",fig.width= 6, fig.height=5}
-#| label: fig-scatter-la
-ggplot(AllCombined, aes(x=Frequency.Total, y = Final_grade)) + geom_point(size=1.4, fill = "turquoise", color = "black", shape = 21) + theme_minimal() +
-  xlab("Total frequency of events") + ylab("Final grade")
-```
-
 ```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
@@ -283,6 +273,16 @@ gt::gt_preview(AllC2)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(AllCombined , options = list(rows.print = 5))
+```
+
+```{r, echo = F, fig.cap="전체 이벤트 빈도와 최종 성적 사이의 관계",fig.width= 6, fig.height=5}
+#| label: fig-scatter-la
+ggplot(AllCombined, aes(x=Frequency.Total, y = Final_grade)) + geom_point(size=1.4, fill = "turquoise", color = "black", shape = 21) + theme_minimal() +
+  xlab("Total frequency of events") + ylab("Final grade")
 ```
 
 
@@ -331,10 +331,6 @@ summary_df(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% sele
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed), options = list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{3pt}{4pt}\selectfont
@@ -350,6 +346,10 @@ gt::gt_preview(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% 
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed), options = list( rows.print = 5 ))
 ```
 
 
@@ -378,10 +378,6 @@ summary_df(moodle |> select(-`User full name`) |> select(-Description) |> select
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(moodle, options = list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
@@ -396,6 +392,10 @@ gt::gt_preview(moodle |> select(-Description) |>  select(-`Affected user`) |> se
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(moodle, options = list( rows.print = 5 ))
 ```
 
 
@@ -429,10 +429,6 @@ summary_df(activity %>% select(-ApplicantName),
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
@@ -447,6 +443,10 @@ gt::gt_preview(activity %>% select(-ApplicantName))
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows.print = 5 ))
 ```
 
 #### 성적
@@ -472,10 +472,6 @@ summary_df(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)),
            ))
 
 ```
-```{r eval=knitr::is_html_output(), echo=F, warning=F}
-rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)), options = list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
@@ -492,6 +488,9 @@ gt::gt_preview(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE))
 \endgroup
 ```
 
+```{r eval=knitr::is_html_output(), echo=F, warning=F}
+rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)), options = list( rows.print = 5 ))
+```
 
 #### eDify 데이터
 
@@ -514,10 +513,6 @@ summary_df(vl %>% select(-ApplicantName) ,
              c("학생이 영상의 특정 지점으로 이동(스크롤)한 횟수", "number")
            ))
 ```
-```{r eval=knitr::is_html_output(), echo=F, warning=F}
-rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{6pt}{7pt}\selectfont
@@ -533,6 +528,10 @@ gt::gt_preview(vl %>% select(-ApplicantName))
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F, warning=F}
+rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print = 5 ))
 ```
 
 
@@ -595,10 +594,6 @@ summary_df(filtered_srl, explanations = list(
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
@@ -615,6 +610,10 @@ gt::gt_preview(filtered_srl |>  select(1:13))
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
 ```
 
 ```{r, include=FALSE}
@@ -728,11 +727,6 @@ summary_df(survey %>% mutate_all(as.numeric)  %>% select(19:23), " +",explanatio
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(survey, options=list( rows.print=5 ))
-```
-
-
 ```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
@@ -747,6 +741,10 @@ gt::gt_preview(survey)
 ```
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(survey, options=list( rows.print=5 ))
 ```
 
 
@@ -893,11 +891,6 @@ summary_df(sawses_questionary %>% select(4,8,11,12,13), " +", explanations = lis
 
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(sawses_questionary, options=list( rows.print=5 ))
-```
-
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -911,6 +904,10 @@ gt::gt_preview(sawses_questionary)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(sawses_questionary, options=list( rows.print=5 ))
 ```
 
 ```{r, echo=F, fig.width= 6, fig.height= 4}
@@ -984,10 +981,6 @@ summary_df(interaction_elements_filtered, " +", explanations = list(
 ), ignore = c(T,T,T,T,T))
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -1001,6 +994,10 @@ gt::gt_preview(interaction_elements_filtered)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print=5 ))
 ```
 
 ```{r, fig.width=5, fig.height=5, echo=F, warning=F, message=F}
@@ -1039,10 +1036,6 @@ c("교사의 성별, 여성(68.09%); 남성(31.69%)", NULL),
 c("전문성 수준(0~1)", NULL)
 ))
 ```
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -1057,6 +1050,10 @@ gt::gt_preview(nodes)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
 ```
 
 
@@ -1077,9 +1074,6 @@ names(snamooccent)
  +  **Cross_clique_connectivity**: 교차 클리크 연결성(Cross-clique Connectivity). 정보 전파의 촉진.
 
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
-```
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -1094,6 +1088,10 @@ gt::gt_preview(snamooccent)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
 ```
 
 
@@ -1339,10 +1337,6 @@ summary_df(edgess, " +", explanations = list(
 ))
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(edgess, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{7pt}{9pt}\selectfont
@@ -1356,6 +1350,10 @@ gt::gt_preview(edgess)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(edgess, options=list( rows.print=5 ))
 ```
 
 ```{r, echo=FALSE}
@@ -1375,10 +1373,6 @@ summary_df(nodess_filtered , " +", explanations = list(
 ))
 ```
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(nodess, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{7pt}{9pt}\selectfont
@@ -1392,6 +1386,10 @@ gt::gt_preview(nodess)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(nodess, options=list( rows.print=5 ))
 ```
 
 ```{r, include=FALSE}
@@ -1487,10 +1485,6 @@ summary_df(lgeng , " +", explanations = list(
 
 
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(lgeng, options=list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -1504,6 +1498,10 @@ gt::gt_preview(lgeng2)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(lgeng, options=list( rows.print = 5 ))
 ```
 
 ```{r, fig.width=10, fig.height=6, echo = F, warning=F, message=F}
@@ -1555,10 +1553,6 @@ summary_df(engach %>% mutate(Gender = factor(Gender)) , " +", explanations = lis
 ```
 
 
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(engach, options=list( rows.print = 5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
@@ -1572,6 +1566,10 @@ gt::gt_preview(engach)
 
 ```{=tex}
 \endgroup
+```
+
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(engach, options=list( rows.print = 5 ))
 ```
 
 ```{r, echo = F, fig.width=8, fig.height=3}
@@ -1653,10 +1651,6 @@ summary_df(covid_filtered[,19:21], " +", explanations = list(
   c('문항 "현재의 자택 학습 상황에서 나는 시작하기 전에 어떻게 공부할지 생각한다"에 대한 응답',"number"),
   c('문항 "현재의 자택 학습 상황에서 나는 학습의 방향을 잡기 위해 사용할 학습 목표를 세운다"에 대한 응답',"number")))
 ```
-```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(covid_filtered, options=list( rows.print=5 ))
-```
-
 ```{=tex}
 \begingroup
 \fontsize{6pt}{8pt}\selectfont
@@ -1672,6 +1666,9 @@ gt::gt_preview(covid_filtered)
 \endgroup
 ```
 
+```{r eval=knitr::is_html_output(), echo=F}
+rmarkdown::paged_table(covid_filtered, options=list( rows.print=5 ))
+```
 
 ```{r, echo=F, fig.width= 4, fig.height= 3}
 #| label: fig-covid-likert
