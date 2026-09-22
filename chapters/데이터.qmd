@@ -121,7 +121,7 @@ gt::gt_preview(moodle |> select(-Log))
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print=5 ))
+rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print = 10 ))
 ```
 
 ```{r, echo = F, fig.width= 6, fig.height= 3}
@@ -168,7 +168,7 @@ gt::gt_preview(Demographics)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(Demographics, options=list( rows.print=5 ))
+rmarkdown::paged_table(Demographics, options=list( rows.print = 10 ))
 ```
 
 #### 성적
@@ -218,7 +218,7 @@ gt::gt_preview(Results2)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(Results, options=list( rows.print=5 ))
+rmarkdown::paged_table(Results, options=list( rows.print = 10 ))
 ```
 ```{r, echo = F, fig.cap="학생별·채점 항목별 성적",fig.width= 6, fig.height= 3}
 #| label: fig-grades-la
@@ -277,7 +277,7 @@ gt::gt_preview(AllC2)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(AllCombined , options = list(rows.print = 5))
+rmarkdown::paged_table(AllCombined , options = list(rows.print = 10))
 ```
 
 ```{r, echo = F, fig.cap="전체 이벤트 빈도와 최종 성적 사이의 관계",fig.width= 6, fig.height=5}
@@ -350,7 +350,7 @@ gt::gt_preview(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% 
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed), options = list( rows.print = 5 ))
+rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed), options = list( rows.print = 10 ))
 ```
 
 
@@ -396,7 +396,7 @@ gt::gt_preview(moodle |> select(-Description) |>  select(-`Affected user`) |> se
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(moodle, options = list( rows.print = 5 ))
+rmarkdown::paged_table(moodle, options = list( rows.print = 10 ))
 ```
 
 
@@ -447,7 +447,7 @@ gt::gt_preview(activity %>% select(-ApplicantName))
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows.print = 5 ))
+rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows.print = 10 ))
 ```
 
 #### 성적
@@ -490,7 +490,7 @@ gt::gt_preview(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE))
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F, warning=F}
-rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)), options = list( rows.print = 5 ))
+rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)), options = list( rows.print = 10 ))
 ```
 
 #### eDify 데이터
@@ -532,7 +532,7 @@ gt::gt_preview(vl %>% select(-ApplicantName))
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F, warning=F}
-rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print = 5 ))
+rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print = 10 ))
 ```
 
 
@@ -614,7 +614,7 @@ gt::gt_preview(filtered_srl |>  select(1:13))
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
+rmarkdown::paged_table(filtered_srl, options=list( rows.print = 10 ))
 ```
 
 ```{r, include=FALSE}
@@ -745,7 +745,7 @@ gt::gt_preview(survey)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(survey, options=list( rows.print=5 ))
+rmarkdown::paged_table(survey, options=list( rows.print = 10 ))
 ```
 
 
@@ -855,7 +855,7 @@ gt::gt_preview(sawses_demographic)
 \endgroup
 ```
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(sawses_demographic, options=list( rows.print=5 ))
+rmarkdown::paged_table(sawses_demographic, options=list( rows.print = 10 ))
 ```
 
 다음으로 각 차원에 대한 설문 응답을 제시한다. 응답은 0~100점 척도로 되어 있다. 아래는 데이터의 미리보기이며, @fig-survey-writing 은 설문 응답 분포의 일부를 상자그림으로 보여준다.
@@ -908,7 +908,7 @@ gt::gt_preview(sawses_questionary)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(sawses_questionary, options=list( rows.print=5 ))
+rmarkdown::paged_table(sawses_questionary, options=list( rows.print = 10 ))
 ```
 
 ```{r, echo=F, fig.width= 6, fig.height= 4}
@@ -998,7 +998,7 @@ gt::gt_preview(interaction_elements_filtered)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print=5 ))
+rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print = 10 ))
 ```
 
 ```{r, fig.width=5, fig.height=5, echo=F, warning=F, message=F}
@@ -1054,7 +1054,7 @@ gt::gt_preview(nodes)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
+rmarkdown::paged_table(nodes , options=list( rows.print = 10 ))
 ```
 
 
@@ -1092,7 +1092,7 @@ gt::gt_preview(snamooccent)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
+rmarkdown::paged_table(snamooccent , options=list( rows.print = 10 ))
 ```
 
 
@@ -1155,7 +1155,7 @@ rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
 ```{r, include=F}
 interaction_elementss = rio::import("https://raw.githubusercontent.com/lamethods/data/main/7_snaHS/interaction.csv")
 rownames(interaction_elementss) <- NULL
-#rmarkdown::paged_table(interaction_elementss, options=list( rows.print=5 ))
+#rmarkdown::paged_table(interaction_elementss, options=list( rows.print = 10 ))
 ```
 ```{r, results="asis", echo=FALSE}
 summary_df(interaction_elementss, " +", explanations = list(
@@ -1182,7 +1182,7 @@ gt::gt_preview(interaction_elementss)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(interaction_elementss, options=list( rows.print=5 ))
+rmarkdown::paged_table(interaction_elementss, options=list( rows.print = 10 ))
 ```
 
 ```{r, fig.width=6, fig.height=5, echo=F, warning=F, message=F}
@@ -1255,7 +1255,7 @@ gt::gt_preview(nodes_filtered)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(nodes_filtered, options=list( rows.print=5 ))
+rmarkdown::paged_table(nodes_filtered, options=list( rows.print = 10 ))
 ```
 
 ```{r, echo=F, fig.width= 10, fig.height= 5, include=FALSE}
@@ -1354,7 +1354,7 @@ gt::gt_preview(edgess)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(edgess, options=list( rows.print=5 ))
+rmarkdown::paged_table(edgess, options=list( rows.print = 10 ))
 ```
 
 ```{r, echo=FALSE}
@@ -1390,7 +1390,7 @@ gt::gt_preview(nodess)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(nodess, options=list( rows.print=5 ))
+rmarkdown::paged_table(nodess, options=list( rows.print = 10 ))
 ```
 
 ```{r, include=FALSE}
@@ -1502,7 +1502,7 @@ gt::gt_preview(lgeng2)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(lgeng, options=list( rows.print = 5 ))
+rmarkdown::paged_table(lgeng, options=list( rows.print = 10 ))
 ```
 
 ```{r, fig.width=10, fig.height=6, echo = F, warning=F, message=F}
@@ -1570,7 +1570,7 @@ gt::gt_preview(engach)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(engach, options=list( rows.print = 5 ))
+rmarkdown::paged_table(engach, options=list( rows.print = 10 ))
 ```
 
 ```{r, echo = F, fig.width=8, fig.height=3}
@@ -1668,7 +1668,7 @@ gt::gt_preview(covid_filtered)
 ```
 
 ```{r eval=knitr::is_html_output(), echo=F}
-rmarkdown::paged_table(covid_filtered, options=list( rows.print=5 ))
+rmarkdown::paged_table(covid_filtered, options=list( rows.print = 10 ))
 ```
 
 ```{r, echo=F, fig.width= 4, fig.height= 3}
