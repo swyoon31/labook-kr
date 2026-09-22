@@ -24,6 +24,7 @@ source("aux_functions.R")
 
 ## 데이터의 유형
 
+
 ### 맥락 데이터
 
 맥락 데이터(Contextual Data)란 인구통계학적 정보, 사회경제적 지위, 이전 학업 성취와 같이 학습이 이루어지는 환경에 대한 정보를 제공하는 데이터를 말한다. 이러한 유형의 데이터는 외부 요인이 학습에 어떤 영향을 미치는지 이해하고, 유사한 특성을 가진 학생들을 식별하며, 맞춤형 개입을 개발하는 데 사용될 수 있다. 인구통계 데이터는 나이, 성별, 인종, 민족 등 학습자의 특성을 이해하는 데 사용될 수 있다 \[3\]. 사회경제적 데이터는 소득, 고용 상태, 교육 수준 등 학습자의 사회경제적 지위가 미치는 영향을 살펴보는 데 사용될 수 있다 \[4\]. 이전 학업 성취 데이터는 이전 성적이나 시험 점수와 같은 학습자의 학업 배경이 현재의 학습에 어떤 영향을 미치는지 이해하는 데 사용될 수 있다 \[5\]. 학습 맥락에 대한 데이터, 예컨대 교육 프로그램과 강좌의 수준과 난이도, 형식(온라인 대 대면), 교수법(예: 플립드 러닝, 실습 강좌 등) 역시 학생을 더 잘 이해하고 지원하는 데 관련이 있다 \[6\].
@@ -62,11 +63,13 @@ source("aux_functions.R")
 
 ## 데이터셋 선정
 
-이 절에서는 책 전체에서 사용될 엄선된 데이터셋들을 설명한다. 입문 장들에서 독자는 다양한 형식의 데이터셋을 불러오는 방법 \[7\], 데이터를 정제하고 변환하는 방법 \[8\], 기초 통계를 수행하는 방법 \[17\], 매력적인 시각화를 만드는 방법을 배우게 된다 \[9\]. 이후 각 장에서는 특정 방법을 다루며, 아래에서 설명하는 하나 이상의 데이터셋을 이용해 튜토리얼 형식으로 그 방법을 설명한다. 모든 데이터셋은 GitHub(<https://github.com/lamethods/data>)에서 확인할 수 있다.
+이 절에서는 책 전체에서 사용될 엄선된 데이터셋들을 설명한다. 입문 장들에서 독자는 다양한 형식의 데이터셋을 불러오는 방법 \[7\], 데이터를 정제하고 변환하는 방법 \[8\], 기초 통계를 수행하는 방법 \[17\], 매력적인 시각화를 만드는 방법을 배우게 된다 \[9\]. 이후 각 장에서는 특정 방법을 다루며, 아래에서 설명하는 하나 이상의 데이터셋을 이용해 튜토리얼 형식으로 그 방법을 설명한다. 모든 데이터셋은 GitHub([https://github.com/lamethods/data](https://github.com/lamethods/data))에서 확인할 수 있다.
+
 
 ### 학습분석학 블렌디드 러닝 강좌의 LMS 데이터
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/1_moodleLAcourse)
+
 
 이 책의 첫 번째 데이터셋은 동핀란드대학교(University of Eastern Finland)에서 개설된 실제 학습분석학 블렌디드 러닝 강좌를 바탕으로 생성된 합성 데이터셋이다. 이 강좌는 원본(비합성) 데이터셋을 사용한 발표된 논문에서 이전에 소개된 바 있다 \[55\]. 강좌의 강의는 학습분석학이라는 분야를 이해하는 기초, 즉 최근 문헌의 발전, 수집되는 데이터의 유형, 사용되는 방법 등을 제공했다. 또한 이 강좌는 학습자 데이터를 수집하고 사용하는 것과 관련된 윤리적·프라이버시적 쟁점뿐 아니라 학습 이론도 다루었다. 강좌에는 여러 차례의 실습 세션이 있었는데, 이를 통해 학생들은 실제 데이터셋과 클릭 기반 소프트웨어를 이용해 프로세스 마이닝과 사회 네트워크 분석 같은 학습분석학 방법을 익힐 수 있었다.
 
@@ -74,7 +77,8 @@ source("aux_functions.R")
 
 이 데이터셋에는 네 개의 파일이 포함되어 있다. 학생들의 Moodle 내 온라인 활동을 담은 파일, 성적을 담은 파일, 인구통계 데이터를 담은 파일, 그리고 이 모든 정보를 종합한 파일이다. 이 데이터셋은 CC BY 4.0 라이선스로 공유되는데, 이는 적절한 출처 표시를 하는 한 누구나 자유롭게 이 데이터를 공유, 변형, 배포할 수 있음을 의미한다. 이 데이터셋은 이 책의 입문 장들에서 R의 기초 \[7\], 데이터 정제 \[8\], 기초 통계 \[17\], 데이터 시각화를 배우는 데 사용되었다 \[9\]. 또한 잘 알려진 두 가지 학습분석학 방법, 즉 순차 분석 \[30\]과 프로세스 마이닝을 설명하기 위해 두 개의 추가 장에서 사용되었다 \[27\]. 아래에서는 이 데이터셋을 구성하는 각 파일에 대해 더 자세히 설명한다.
 
-#### Events
+
+#### 이벤트
 
 `Events.xlsx` 파일에는 130명의 서로 다른 학생에 대한 95,580건의 타임스탬프가 찍힌 Moodle 로그가 담겨 있다. 활동에는 강의 시청, 포럼 토론, 개인 과제 수행뿐 아니라 소규모 그룹 토론 등이 포함된다. 로그는 세분성과 의미의 균형을 맞추기 위해 다시 코딩되었다. 즉 본질적으로 동일한 행동을 나타내는 로그들을 함께 묶었다. 예를 들어 그룹 프로젝트와 관련된 활동은 모두 `Group_work`로, 피드백과 관련된 로그 활동은 `Feedback`으로, 실습 자료나 과제에 대한 학생 접근 로그는 `Practicals`로, 학습과 무관한 사회적 상호작용은 `Social`로 코딩하는 식이다. 아래에서는 데이터셋의 열을 설명하고 미리보기를 보여준다. @fig-actions-per-student 에서는 학생별 이벤트 분포를 보여준다.
 
@@ -86,23 +90,27 @@ rownames(moodle) <- NULL
 ```{r, results="asis", echo=FALSE}
 summary_df(moodle |> mutate(timecreated = as.character(timecreated)) |> select(-Log),
            explanations = list(
-                            c('Resource of the LMS where the event takes place, for example "Assignment: Literature review"', NULL),
-                            c("User name in the LMS", NULL),
-                            c("Timestamp in which each event took place, ranging from September 9th 2019 to October 27th 2019", NULL),
-                            c("Type of resource involved in the event. There are ", NULL),
-                            c("Name of the event in Moodle. There are ", NULL),
-                            c("Column coded based on the combination of the event name and context. There are ", NULL)
+                            c('이벤트가 발생한 LMS 자원(예: "과제: 문헌 리뷰")', NULL),
+                            c("LMS 내 사용자명", NULL),
+                            c("각 이벤트가 발생한 타임스탬프(2019년 9월 9일~2019년 10월 27일)", NULL),
+                            c("이벤트에 관련된 자원 유형. ", NULL),
+                            c("Moodle 내 이벤트명. ", NULL),
+                            c("이벤트명과 맥락의 조합에 따라 코딩된 열. ", NULL)
                             ), ignore = c(T,T,T,F,F,F))
 ```
+
+
+
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(moodle |> select(-Log), options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-4pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-logs
 #| tbl-cap: "Preview of the LA course Moodle Events dataset"
@@ -111,7 +119,9 @@ rownames(moodle) <- NULL
 gt::gt_preview(moodle |> select(-Log))
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, echo = F, fig.width= 6, fig.height= 3}
 #| label: fig-actions-per-student
@@ -119,7 +129,7 @@ gt::gt_preview(moodle |> select(-Log))
 moodle %>% group_by(user,Action) %>% count() %>% ggplot(aes(y = Action, x = n )) + geom_boxplot( fill = "turquoise", outlier.alpha = 0.2) + theme_minimal() + theme(legend.position="none") + xlab("Distribution of the count of events per student")  + ylab("Action")
 ```
 
-#### Demographics
+#### 인구통계
 
 `Demographics.xlsx` 파일에는 이름, 생년월일, 성별, 소재지(캠퍼스 재학 대 원격 수강), 재직 상태를 포함하여 학생에 대한 모의(시뮬레이션) 인구통계 데이터가 담겨 있다. 아래에서는 데이터셋의 열을 설명하고 데이터의 미리보기를 보여준다.
 
@@ -130,14 +140,14 @@ rownames(Demographics) <- NULL
 
 ```{r, results="asis", echo=FALSE}
 summary_df(Demographics, explanations = list(
-  c("User identifier in the learning management system, with 130 distinct entries", NULL),
-  c("User's first name", NULL),
-  c("User's last name", NULL),
-  c("Country of origin", NULL),
-  c("User's gender: F (Female, 50%) or M (Male, 50%)", NULL),
-  c("Date of birth", NULL),
-  c("Whether the student is on campus or studying remotely, with ", NULL),
-  c("Whether the student is working part-time, full-time or not at all, with ", NULL)
+  c("학습관리시스템 내 사용자 식별자(130개의 서로 다른 값)", NULL),
+  c("사용자의 이름", NULL),
+  c("사용자의 성", NULL),
+  c("출신 국가", NULL),
+  c("사용자의 성별: F(여성, 50%) 또는 M(남성, 50%)", NULL),
+  c("생년월일", NULL),
+  c("학생이 캠퍼스에 재학 중인지 원격으로 수강 중인지 여부. ", NULL),
+  c("학생이 시간제·전일제로 근무 중인지 또는 근무하지 않는지 여부. ", NULL)
   ), ignore = c(T,T,T,T,T,T,F,F))
 ```
 
@@ -145,19 +155,22 @@ summary_df(Demographics, explanations = list(
 rmarkdown::paged_table(Demographics, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{6pt}{8pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-demo
 #| tbl-cap: "Preview of the LA course Demographic dataset"
 gt::gt_preview(Demographics)
 ```
 
+```{=tex}
 \endgroup
+```
 
-#### Results
+#### 성적
 
 성과 데이터는 `Results.xlsx` 파일에 제공되며, 여기에는 과제별 성적과 강좌 전체 성적이 포함되어 있다. 아래에서는 데이터셋 열을 설명하고 데이터 미리보기를 보여준다(미리보기에서는 열 이름이 축약되어 있다). @fig-grades-la 에서는 채점 항목별 성적 분포를 보여준다.
 
@@ -168,28 +181,29 @@ rownames(Results) <- NULL
 
 ```{r, results='asis', echo=FALSE}
 summary_df(Results ,explanations = list(
-c("User name in the learning management system (it matches the previous files)", NULL),
-c("Grade of the first SNA assignment (0-10)", NULL),
-c("Grade of the second SNA assignment (0-10)", NULL),
-c("Grade of the studies' review assignment (0-10)", NULL),
-c("Individual grade of the group project (0-10)", NULL),
-c("Group grade of the group project (0-10)", NULL),
-c("Grade of the practical exercises (0-10)", NULL),
-c("Final project grade (0-10)", NULL),
-c("Grade of the literature review assignment (0-10)", NULL),
-c("Grade of the data analysis assignment (0-5)", NULL),
-c("Grade of the introductory assigment (0-10)", NULL),
-c("Grade of the theory assignment (0-10)", NULL),
-c("Grade of the ethics assignment (0-10)", NULL),
-c("Grade of the critique assignment (0-10)", NULL),
-c("Final course grade (0-10)", NULL)
+c("학습관리시스템 내 사용자명(이전 파일들과 일치)", NULL),
+c("첫 번째 SNA 과제 성적(0~10)", NULL),
+c("두 번째 SNA 과제 성적(0~10)", NULL),
+c("문헌 리뷰 과제 성적(0~10)", NULL),
+c("그룹 프로젝트의 개인별 성적(0~10)", NULL),
+c("그룹 프로젝트의 그룹별 성적(0~10)", NULL),
+c("실습 과제 성적(0~10)", NULL),
+c("최종 프로젝트 성적(0~10)", NULL),
+c("문헌 리뷰 과제 성적(0~10)", NULL),
+c("데이터 분석 과제 성적(0~5)", NULL),
+c("입문 과제 성적(0~10)", NULL),
+c("이론 과제 성적(0~10)", NULL),
+c("윤리 과제 성적(0~10)", NULL),
+c("비평 과제 성적(0~10)", NULL),
+c("강좌 최종 성적(0~10)", NULL)
 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-results
 #| tbl-cap: "Preview of the LA course Results (grades) dataset"
@@ -198,12 +212,13 @@ names(Results2) <- str_replace(names(Results2), "Grade.", "")
 gt::gt_preview(Results2)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(Results, options=list( rows.print=5 ))
 ```
-
 ```{r, echo = F, fig.cap="Grade per student and graded item",fig.width= 6, fig.height= 3}
 #| label: fig-grades-la
   Results %>% pivot_longer(2:15)  %>% ggplot(aes(y = name, x=value) ) +
@@ -212,7 +227,8 @@ rmarkdown::paged_table(Results, options=list( rows.print=5 ))
   xlab("Distribution of grades")  + ylab("Action")
 ```
 
-#### AllCombined
+
+#### 통합 데이터
 
 `AllCombined.xlsx` 파일에는 학생들의 인구통계, 성적, LMS 내 각 행동의 빈도가 담겨 있다. 학생 인구통계 데이터와 성적에 해당하는 열은 그대로 유지되지만, 이벤트 데이터는 이벤트 유형별로(`Events` 데이터셋의 `Action` 열 기준) 학생별로 그룹화되어 있다. 즉 각 이벤트 유형마다 새로운 열이 생성되어, 각 학생이 해당 유형의 이벤트를 몇 번 가졌는지를 담고 있다. 또한 새로운 열 `AchievingGroup`은 고성취 학생과 저성취 학생을 구분한다. 아래에서는 이전 미리보기에 나타나지 않았던 데이터의 새로운 열들에 대한 미리보기를 보여주고 이를 설명한다(열 이름은 축약되어 있다).
 
@@ -224,20 +240,20 @@ rownames(AllCombined) <- NULL
 ```{r, results="asis", echo=FALSE}
 summary_df(AllCombined |> select(contains("Frequency."), "AchievingGroup"),
            explanations = list(
-  c('Number of events related to the "Applications" resource', NULL),
-  c("Number of events related to the assignments' submission", NULL),
-  c("Number of visits to the course main page", NULL),
-  c("Number of views of the assignment feedback", NULL),
-  c("Number of events related to general learning resources", NULL),
-  c("Number of events related to the group work", NULL),
-  c("Number of events related to assignment instructions", NULL),
-  c('Number of events related to the "LA types" resource', NULL),
-  c("Number of events related to the practicals", NULL),
-  c("Number of events related to the forum discussion", NULL),
-  c('Number of events related to the "Ethics" resource', NULL),
-  c('Number of events related to the "Theory" resource', NULL),
-  c("Number of events overall", NULL),
-  c("Categorization as high achievers (top 50% grades) and lows achievers (bottom 50% grades)", NULL)
+  c('"Applications" 자원과 관련된 이벤트 수', NULL),
+  c("과제 제출과 관련된 이벤트 수", NULL),
+  c("강좌 메인 페이지 방문 횟수", NULL),
+  c("과제 피드백 열람 횟수", NULL),
+  c("일반 학습 자료와 관련된 이벤트 수", NULL),
+  c("그룹 작업과 관련된 이벤트 수", NULL),
+  c("과제 안내와 관련된 이벤트 수", NULL),
+  c('"LA types" 자원과 관련된 이벤트 수', NULL),
+  c("실습과 관련된 이벤트 수", NULL),
+  c("포럼 토론과 관련된 이벤트 수", NULL),
+  c('"Ethics" 자원과 관련된 이벤트 수', NULL),
+  c('"Theory" 자원과 관련된 이벤트 수', NULL),
+  c("전체 이벤트 수", NULL),
+  c("고성취자(상위 50% 성적)와 저성취자(하위 50% 성적)로의 구분", NULL)
 ))
 ```
 
@@ -251,10 +267,11 @@ ggplot(AllCombined, aes(x=Frequency.Total, y = Final_grade)) + geom_point(size=1
   xlab("Total frequency of events") + ylab("Final grade")
 ```
 
+```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-4.5pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-combined
 #| tbl-cap: "Preview of the LA course combined dataset"
@@ -264,46 +281,52 @@ names(AllC2) <- str_replace(names(AllC2), pattern = "Frequency.", replacement = 
 gt::gt_preview(AllC2)
 ```
 
+```{=tex}
 \endgroup
+```
+
 
 ### 오만 고등교육기관의 LMS 데이터
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/2_moodleEdify)
 
-다음 데이터셋은 오만의 한 고등교육기관에서 컴퓨팅 전공으로 재학 중인 학생들의 로그 데이터를 포함한다. 이 데이터셋에는 6학기 이상 재학 중인 학생들의 데이터가 담겨 있다. 데이터는 다섯 개의 모듈(2017\~2021년 봄학기)에 걸쳐 기록되었으며, 총 40개의 특성을 가진 326명 학생의 기록을 포함한다. 여기에는 학생의 학사 정보(24개 특성), Moodle LMS에서 수행한 학생 활동 로그(10개 특성), eDify 모바일 애플리케이션에서의 학생 영상 상호작용(6개 특성)이 포함된다. 학사 데이터에는 인구통계 데이터, 학사 데이터, 학업 계획, 학사 위반 사항이 포함된다. Moodle 활동 데이터에는 Moodle에서의 학생 타임스탬프 활동이 포함된다. eDify 데이터에는 eDify 모바일 애플리케이션에서의 영상 상호작용이 담겨 있다.
+
+다음 데이터셋은 오만의 한 고등교육기관에서 컴퓨팅 전공으로 재학 중인 학생들의 로그 데이터를 포함한다. 이 데이터셋에는 6학기 이상 재학 중인 학생들의 데이터가 담겨 있다. 데이터는 다섯 개의 모듈(2017~2021년 봄학기)에 걸쳐 기록되었으며, 총 40개의 특성을 가진 326명 학생의 기록을 포함한다. 여기에는 학생의 학사 정보(24개 특성), Moodle LMS에서 수행한 학생 활동 로그(10개 특성), eDify 모바일 애플리케이션에서의 학생 영상 상호작용(6개 특성)이 포함된다. 학사 데이터에는 인구통계 데이터, 학사 데이터, 학업 계획, 학사 위반 사항이 포함된다. Moodle 활동 데이터에는 Moodle에서의 학생 타임스탬프 활동이 포함된다. eDify 데이터에는 eDify 모바일 애플리케이션에서의 영상 상호작용이 담겨 있다.
 
 이 데이터셋은 Hasan 등의 논문에 소개되어 있으며 \[56\], 원래 CC BY 4.0 라이선스로 Zenodo 저장소에 공개되었다 \[57\]. 이 라이선스는 저자에게 적절한 출처를 표시하고 추가적인 제약을 가하지 않는 한 누구나 이 데이터셋을 공유하고 변형할 수 있음을 의미한다. 원자료 외에도, 이 데이터셋에는 예측 모델링이나 학생 프로파일 군집화와 같은 다양한 목적으로 사용될 수 있는 일련의 지표를 담은 처리된 파일도 포함되어 있다. 이 데이터셋은 서로 다른 알고리즘과 접근법을 이용해 학생의 성과를 예측하려는 목적의 여러 논문에서 사용되었다 \[58–59\]. 이 데이터셋의 주요 파일은 아래에서 설명한다.
 
-#### Student academic information
+#### 학생 학사 정보
 
 기관의 정보 시스템에서 다운로드한 학생들의 학사 정보이다. 데이터는 15개의 파일(`KMS`로 시작)에 나뉘어 있으나, 편의를 위해 하나의 파일(`KMSmodule.RDS`)로 통합되었다. 아래에서는 데이터의 미리보기와 그 구조를 보여준다.
+
 
 ```{r, include=FALSE}
 kms = rio::import("https://github.com/lamethods/data/raw/main/2_moodleEdify/KMSmodule.RDS")
 rownames(kms) <- NULL
 ```
 
+
 ```{r, results="asis", echo=FALSE}
 summary_df(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed),
            explanations = list(
-             c('Original file name that contains the module offering identifier (e.g., "KMS Module 1 F19.csv"). There are 15 distinct entries (one for each file)', "character"),
-             c("Module identifier (Module 1-5)", "character"),
-             c("Name of the module (Course 1-5)", "character"),
-             c("Class section in which the student has been enrolled (Session-A or Session-B)", "character"),
-             c('Student identifier (e.g., "Student 83"). There are 306 distinct students', "character"),
-             c("Students' cumulative GPA (1-4)", "number"),
-             c("Number of attempts per student and module", "number"),
-             c("Students' advisor identifier (e.g., 'Advisor 16'). There are 50 distinct advisors", "character"),
-             c("Whether the student is studying remotely. There are 2 possible values:  Yes (0.31%) or No (99.69%)", "character"),
-             c("Whether the student has previous incomplete modules. There are 2 possible values: Yes (3.36%) or No (96.64%)", "character"),
-             c("Whether the module has a high risk of failure. There are 2 possible values: Yes (6.73%) or No (93.27%)", "character"),
-             c("Whether the student is progressing in their degree plan. There are 2 possible values: Yes (1.83%) or No (98.17%)", "character"),
-             c("Whether the student has failed two or more modules in the past. There are 2 possible values: Yes (23.55%) or No (76.45%)", "character"),
-             c("Whether the student has been registed for having any educational deficiencies. There are 2 possible values: Yes (4.59%) or No (95.41%)", "character"),
-             c("Number of other modules the student is enrolled in on the same semester", "character"),
-             c("Whether the student has enrolled in the prerequistide module", "character"),
-             c("Modules for which the student has a history of plagiarism", "character"),
-             c("Modules for which the student has a history of academic malpractice", "character")
+             c('모듈 개설 식별자가 담긴 원본 파일명(예: "KMS Module 1 F19.csv"). 15개의 서로 다른 값(파일마다 하나씩)', "character"),
+             c("모듈 식별자(모듈 1~5)", "character"),
+             c("모듈명(강좌 1~5)", "character"),
+             c("학생이 등록된 분반(Session-A 또는 Session-B)", "character"),
+             c('학생 식별자(예: "Student 83"). 306명의 서로 다른 학생', "character"),
+             c("학생의 누적 평점(GPA, 1~4)", "number"),
+             c("학생별·모듈별 시도 횟수", "number"),
+             c("학생 지도교수 식별자(예: 'Advisor 16'). 50명의 서로 다른 지도교수", "character"),
+             c("학생의 원격 수강 여부. 가능한 값은 2가지: 예(0.31%) 또는 아니오(99.69%)", "character"),
+             c("이전에 미이수 모듈이 있었는지 여부. 가능한 값은 2가지: 예(3.36%) 또는 아니오(96.64%)", "character"),
+             c("해당 모듈이 낙제 고위험 모듈인지 여부. 가능한 값은 2가지: 예(6.73%) 또는 아니오(93.27%)", "character"),
+             c("학생이 학위 이수 계획에 따라 진행 중인지 여부. 가능한 값은 2가지: 예(1.83%) 또는 아니오(98.17%)", "character"),
+             c("과거에 두 개 이상의 모듈에서 낙제한 적이 있는지 여부. 가능한 값은 2가지: 예(23.55%) 또는 아니오(76.45%)", "character"),
+             c("학습 결손 사항이 등록되어 있는지 여부. 가능한 값은 2가지: 예(4.59%) 또는 아니오(95.41%)", "character"),
+             c("같은 학기에 학생이 등록한 다른 모듈의 수", "character"),
+             c("학생이 선수 모듈을 이수했는지 여부", "character"),
+             c("표절 이력이 있는 모듈", "character"),
+             c("학사 부정행위 이력이 있는 모듈", "character")
            ))
 
 ```
@@ -312,10 +335,12 @@ summary_df(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% sele
 rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed), options = list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{3pt}{4pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
 \fontfamily{Arial}\selectfont
+```
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-kms-oman
@@ -323,25 +348,32 @@ rmarkdown::paged_table(kms %>% select(-ApplicantName) %>% select(-ApplicantMobil
 gt::gt_preview(kms %>% select(-ApplicantName) %>% select(-ApplicantMobile)  %>% select(-SpecialNeed))
 ```
 
+```{=tex}
 \endgroup
+```
 
-#### Moodle
+
+
+
+#### Moodle 데이터
 
 Moodle 데이터는 15개의 파일(`Moodle`로 시작)에 나뉘어 있으며, 여기에는 각 모듈에서 학생들이 Moodle LMS에서 수행한 모든 클릭이 담겨 있다. 이 15개의 파일은 편의를 위해 하나의 파일(`moodleEdify.RDS`)로 통합되었다. 아래에서는 데이터 미리보기와 그 구조에 대한 설명을 보여준다.
+
 
 ```{r, include=FALSE}
 moodle = rio::import("https://github.com/lamethods/data/raw/main/2_moodleEdify/moodleEdify.RDS")
 rownames(moodle) <- NULL
 ```
 
+
 ```{r, results="asis", echo=FALSE}
 summary_df(moodle |> select(-`User full name`) |> select(-Description) |> select(-`Affected user` ) |> select(-`IP address`) |> select(-`Origin`),
            explanations = list(
-             c("Module offering identifier. There are 15 distinct entries (one for each file)", NULL),
-             c("Timestamp in which the event occurred, ranging between January 1st 2018 to December 9th 2020" , NULL),
-             c('Resource of the LMS where the event takes place, for example "File: Lecture 4"', NULL),
-             c("Type of resource involved in the event. There are ", NULL),
-             c("Name of the event in Moodle. There are ", NULL)
+             c("모듈 개설 식별자. 15개의 서로 다른 값(파일마다 하나씩)", NULL),
+             c("이벤트가 발생한 타임스탬프(2018년 1월 1일~2020년 12월 9일)", NULL),
+             c('이벤트가 발생한 LMS 자원(예: "파일: 강의 4")', NULL),
+             c("이벤트에 관련된 자원 유형. ", NULL),
+             c("Moodle 내 이벤트명. ", NULL)
            ), ignore = c(T,T,T,F,F))
 
 ```
@@ -350,18 +382,23 @@ summary_df(moodle |> select(-`User full name`) |> select(-Description) |> select
 rmarkdown::paged_table(moodle, options = list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
 \fontfamily{Arial}\selectfont
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-moodle-oman
 #| tbl-cap: "Preview of the Higher Education Institution Moodle data"
 gt::gt_preview(moodle |> select(-Description) |>  select(-`Affected user`) |> select(-`User full name`)  |> select(-`IP address`) |> select(-`Origin`) )
 ```
 
+```{=tex}
 \endgroup
+```
+
+
 
 ```{r, echo=F, fig.width= 8, fig.height= 4}
 # #| label: fig-oman-events
@@ -370,22 +407,24 @@ gt::gt_preview(moodle |> select(-Description) |>  select(-`Affected user`) |> se
 # ggplot((moodle), aes(y = csv)) +  geom_bar(stat = "count", fill = "turquoise") + theme_minimal()  + xlab("Number of events") + ylab("Course") +   geom_text(aes(label = after_stat(count)), stat = "count", vjust = 0.5, size= 2.9, colour = "black")
 ```
 
-#### Activity
+#### 활동
 
 Moodle 데이터를 바탕으로 한 학생별 집계 정보로, 캠퍼스 내 활동과 캠퍼스 밖(자택) 활동을 모두 포함한다. 이 데이터 역시 15개의 파일(`Activity`로 시작)에 나뉘어 있으나, 편의를 위해 하나의 파일(`ActivityModule.RDS`)로 통합되었다. 아래에서는 데이터의 미리보기와 그 구조를 보여준다.
+
 
 ```{r, include=FALSE}
 activity = rio::import("https://github.com/lamethods/data/raw/main/2_moodleEdify/ActivityModule.RDS")
 rownames(activity) <- NULL
 ```
 
+
 ```{r, results="asis", echo=FALSE}
 summary_df(activity %>% select(-ApplicantName),
            explanations = list(
-             c('Original file name that contains the module offering identifier (e.g., "Activity Module 1 F19.csv"). There are 15 distinct entries (one for each file)', "character"),
-             c('Student identifier (e.g., "Student 208")', "character"),
-             c("Duration of the activity (in minutes) within campus", "number"),
-             c("Duration of the activity (in minutes) off campus", "number")
+             c('모듈 개설 식별자가 담긴 원본 파일명(예: "Activity Module 1 F19.csv"). 15개의 서로 다른 값(파일마다 하나씩)', "character"),
+             c('학생 식별자(예: "Student 208")', "character"),
+             c("캠퍼스 내 활동 시간(분)", "number"),
+             c("캠퍼스 밖 활동 시간(분)", "number")
            ))
 
 ```
@@ -394,61 +433,70 @@ summary_df(activity %>% select(-ApplicantName),
 rmarkdown::paged_table(activity %>% select(-ApplicantName), options = list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
 \fontfamily{Arial}\selectfont
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-activity-oman
 #| tbl-cap: "Preview of the Higher Education Institution Activity data"
 gt::gt_preview(activity %>% select(-ApplicantName))
 ```
 
+```{=tex}
 \endgroup
+```
 
-#### Results
+#### 성적
 
 각 모듈에서의 학생 수행 데이터이다. 이 데이터 역시 10개의 파일(`Result`로 시작)에 나뉘어 있으나, 편의를 위해 하나의 파일(`ResultModule.RDS`)로 통합되었다. 아래에서는 데이터의 미리보기와 그 구조를 보여준다.
+
 
 ```{r, include=FALSE}
 result = rio::import("https://github.com/lamethods/data/raw/main/2_moodleEdify/ResultModule.RDS")
 rownames(result) <- NULL
 ```
 
+
 ```{r, results="asis", echo=FALSE, warning = F}
 summary_df(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)),
            explanations = list(
-             c('Original file name that contains the module offering identifier (e.g., "Result Module 1 F19.csv"). There are 10 distinct entries (one for each file)', "character"),
-             c('Student identifier (e.g., "Student 208"). There are 326 distinct students', "character"),
-             c("Class section, Session-A (84.66%), or Session-B (9.82%)", "character"),
-             c("Grade of students' first assignment (0-100)", "number"),
-             c("Grade of students' second assignment (0-100)", "number"),
-             c("Grade of students' end-of-semester examination (0-100)", "number")
+             c('모듈 개설 식별자가 담긴 원본 파일명(예: "Result Module 1 F19.csv"). 10개의 서로 다른 값(파일마다 하나씩)', "character"),
+             c('학생 식별자(예: "Student 208"). 326명의 서로 다른 학생', "character"),
+             c("분반, Session-A(84.66%) 또는 Session-B(9.82%)", "character"),
+             c("학생의 첫 번째 과제 성적(0~100)", "number"),
+             c("학생의 두 번째 과제 성적(0~100)", "number"),
+             c("학생의 학기말 시험 성적(0~100)", "number")
            ))
 
 ```
-
 ```{r eval=knitr::is_html_output(), echo=F, warning=F}
 rmarkdown::paged_table(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)), options = list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
 \fontfamily{Arial}\selectfont
-
+```
 ```{r eval=knitr::is_latex_output(), echo = FALSE, warning = FALSE}
 #| label: tbl-results-oman
 #| tbl-cap: "Preview of the Higher Education Institution grade data"
 gt::gt_preview(result %>% select(-ApplicantName) %>% mutate(ESE=as.numeric(ESE)))
 ```
 
+```{=tex}
 \endgroup
+```
 
-#### eDify
+
+#### eDify 데이터
 
 eDify 모바일 애플리케이션에서의 학생별 집계 활동 데이터이다. 이 데이터 역시 15개의 파일(`VL`로 시작)에 나뉘어 있으나, 편의를 위해 하나의 파일(`VLModule.RDS`)로 통합되었다. 아래에서는 데이터의 미리보기와 그 구조를 보여준다.
+
 
 ```{r, include=FALSE}
 vl = rio::import("https://github.com/lamethods/data/raw/main/2_moodleEdify/VLModule.RDS")
@@ -458,23 +506,24 @@ rownames(vl) <- NULL
 ```{r, results="asis", echo=FALSE, warning = F}
 summary_df(vl %>% select(-ApplicantName) ,
            explanations = list(
-             c('Original file name that contains the module offering identifier (e.g., "Result Module 1 F19.csv"). There are 15 distinct entries (one for each file)', "character"),
-             c('Student identifier (e.g., "Student 208"). There are 326 distinct students', "character"),
-             c("Number of times the student has played a video", "character"),
-             c("Number of times the student has paused a video", "number"),
-             c("Number of times the student has liked a video", "number"),
-             c("Number of times a student has scrolled to a specific part of the video", "number")
+             c('모듈 개설 식별자가 담긴 원본 파일명(예: "Result Module 1 F19.csv"). 15개의 서로 다른 값(파일마다 하나씩)', "character"),
+             c('학생 식별자(예: "Student 208"). 326명의 서로 다른 학생', "character"),
+             c("학생이 영상을 재생한 횟수", "character"),
+             c("학생이 영상을 일시정지한 횟수", "number"),
+             c("학생이 영상에 좋아요를 누른 횟수", "number"),
+             c("학생이 영상의 특정 지점으로 이동(스크롤)한 횟수", "number")
            ))
 ```
-
 ```{r eval=knitr::is_html_output(), echo=F, warning=F}
 rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{6pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
 \fontfamily{Arial}\selectfont
+```
 
 ```{r eval=knitr::is_latex_output(), echo = FALSE, warning = FALSE}
 #| label: tbl-vl-oman
@@ -482,7 +531,14 @@ rmarkdown::paged_table(vl %>% select(-ApplicantName), options = list( rows.print
 gt::gt_preview(vl %>% select(-ApplicantName))
 ```
 
+```{=tex}
 \endgroup
+```
+
+
+
+
+
 
 ### 학교 참여도, 학업 성취, 자기조절학습
 
@@ -521,20 +577,20 @@ filtered_srl <- srl %>%
 options(scipen=999999999)
 # Check if its z-score they do not include that information in the paper nor the dataset
 summary_df(filtered_srl, explanations = list(
-  c("Student identifier in the school", "character"),
-  c("Student's gender (1 = Male, 48.40%; 2 = Female, 51.46%)", "character"),
-  c("School identifier (1-15)", "character"),
-  c("Grade that students were in 5th grade (62.48%) or 6th grade (37.52%)", "character"),
-  c("Class section (1-3)", "character"),
-  c("Mathematics self-reported academic achievement (1-5)", NULL),
-  c("Spanish self-reported academic achievement (1-5)", NULL),
-  c("Emotional engagement  (z-score)", "double"),
-  c("Cognitive engagement  (z-score)", "double"),
-  c("Behavioural engagement  (z-score)", "double"),
-  c("Environment management  (z-score)", "double"),
-  c("Information and help management  (z-score)", "double"),
-  c("Maladaptative self-regulation  (z-score)", "double"),
-  c("Time management self-regulation (z-score)", "double")
+  c("학교 내 학생 식별자", "character"),
+  c("학생의 성별(1 = 남학생, 48.40%; 2 = 여학생, 51.46%)", "character"),
+  c("학교 식별자(1~15)", "character"),
+  c("학생의 학년, 5학년(62.48%) 또는 6학년(37.52%)", "character"),
+  c("분반(1~3)", "character"),
+  c("수학 자기보고식 학업 성취도(1~5)", NULL),
+  c("스페인어 자기보고식 학업 성취도(1~5)", NULL),
+  c("정서적 참여도(z-점수)", "double"),
+  c("인지적 참여도(z-점수)", "double"),
+  c("행동적 참여도(z-점수)", "double"),
+  c("환경 관리(z-점수)", "double"),
+  c("정보 탐색 및 도움 관리(z-점수)", "double"),
+  c("부적응적 자기조절(z-점수)", "double"),
+  c("시간 관리 자기조절(z-점수)", "double")
 ))
 
 ```
@@ -543,9 +599,12 @@ summary_df(filtered_srl, explanations = list(
 rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
+```
+
 
 ```{r eval=knitr::is_latex_output(), echo=F}
 #| label: tbl-spanish-survey
@@ -554,7 +613,9 @@ rmarkdown::paged_table(filtered_srl, options=list( rows.print=5 ))
 gt::gt_preview(filtered_srl |>  select(1:13))
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, include=FALSE}
 filtered_srl_plot <- filtered_srl %>% select("ren.mat", "ren.leng")
@@ -570,6 +631,9 @@ filtered_srl_melt <- melt(filtered_srl_plot, variable.name = "subject", value.na
 ggplot(filtered_srl_melt, aes(y = subject, fill = forcats::fct_rev(as.character(grade)))) + geom_bar(stat="count", color = "black", position="dodge") + ylab("Subject") + xlab("Number of students") + labs(fill ="Grade") + theme_minimal() + scale_fill_brewer(direction=-1,palette = "RdBu")
 ```
 
+
+
+
 ```{r, echo=F, fig.width= 6, fig.height= 3}
 #| label: fig-hist-engagement-engagement
 #| layout-ncol: 3
@@ -583,6 +647,7 @@ ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Emotion_Engage)))) + ge
 ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Cognitive_Engage)))) + geom_histogram(fill = "turquoise", binwidth = 0.5, color = "black", width = 0.7 ) + theme_minimal()  + xlab("") + ylab("Count")
 ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Behavior_Engage)))) + geom_histogram(fill = "turquoise", binwidth = 0.5, color = "black", width = 0.7 ) + theme_minimal()  + xlab("") + ylab("Count")
 ```
+
 
 ```{r, echo=F, fig.width= 8, fig.height= 4}
 #| label: fig-hist-selfregulation-engagement
@@ -599,6 +664,7 @@ ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Maladapative_Behavior))
 ggplot((filtered_srl), aes(x = as.numeric(gsub(",", ".", Time_Manage)))) + geom_histogram(fill = "turquoise", binwidth = 0.5, color = "black", width = 0.7 ) + theme_minimal()  + xlab("") + ylab("Count")
 ```
 
+
 ### 교사 소진 설문조사 데이터
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/4_teachersBurnout)
@@ -614,49 +680,49 @@ rownames(survey) <- NULL
 
 ```{r, results="asis", echo=FALSE}
 
-cat("\n - **Teacher self-concept** \n ")
+cat("\n - **교사 자기개념(Teacher self-concept)** \n ")
 
-summary_df(survey %>% mutate_all(as.numeric) %>% select(1:5), "  + ", explanations = list(
-  c('Response to the item "I think I have good teaching skills and ability"', "number"),
-  c('Response to the item "I have a reputation for being an efficient teacher"', "number"),
-  c('Response to the item "My colleagues regard me as a competent teacher"', NULL),
-  c('Response to the item "I feel I am a valuable person"', NULL),
-  c('Response to the item "Generally speaking, I am a good teacher"', NULL)))
+summary_df(survey %>% mutate_all(as.numeric) %>% select(1:5), " +", explanations = list(
+  c('문항 "나는 내가 좋은 교수 기술과 능력을 갖추고 있다고 생각한다"에 대한 응답', "number"),
+  c('문항 "나는 유능한 교사라는 평판을 가지고 있다"에 대한 응답', "number"),
+  c('문항 "동료들은 나를 유능한 교사로 여긴다"에 대한 응답', NULL),
+  c('문항 "나는 내가 가치 있는 사람이라고 느낀다"에 대한 응답', NULL),
+  c('문항 "전반적으로 나는 좋은 교사이다"에 대한 응답', NULL)))
 
-cat("\n - **Teacher efficacy** \n ")
+cat("\n - **교사 효능감(Teacher efficacy)** \n ")
 
-summary_df(survey %>% mutate_all(as.numeric)  %>% select(6:10),"  + ", explanations = list(
-  c('Response to the item "I help my students value learning"', NULL),
-  c('Response to the item "I motivate students who show low interest in schoolwork"', NULL),
-  c('Response to the item "I improve understanding of students who are failing"', NULL),
-  c('Response to the item "I provide appropriate challenges for very capable students"', NULL),
-  c('Response to the item "I get students the students to follow classroom rules"', NULL)))
+summary_df(survey %>% mutate_all(as.numeric)  %>% select(6:10)," +", explanations = list(
+  c('문항 "나는 학생들이 학습의 가치를 알도록 돕는다"에 대한 응답', NULL),
+  c('문항 "나는 학업에 관심이 낮은 학생들에게 동기를 부여한다"에 대한 응답', NULL),
+  c('문항 "나는 낙제하고 있는 학생들의 이해를 향상시킨다"에 대한 응답', NULL),
+  c('문항 "나는 매우 유능한 학생들에게 적절한 도전 과제를 제공한다"에 대한 응답', NULL),
+  c('문항 "나는 학생들이 교실 규칙을 따르도록 한다"에 대한 응답', NULL)))
 
-cat("\n - **Emotional exhaustion** \n ")
+cat("\n - **정서적 소진(Emotional exhaustion)** \n ")
 
-summary_df(survey %>% mutate_all(as.numeric)  %>% select(11:15),"  + ", explanations = list(
-  c('Response to the item "I feel emotionally drained from my work"', NULL),
-  c('Response to the item "I feel used up at the end of the workday"', NULL),
-  c('Response to the item "I feel fatigued when I get up in the morning and have to face another day on the job"', NULL),
-  c('Response to the item "I feel burnt out from my work"', NULL),
-  c('Response to the item "Working with people all day is really a strain on me"', NULL)))
+summary_df(survey %>% mutate_all(as.numeric)  %>% select(11:15)," +", explanations = list(
+  c('문항 "나는 업무로 인해 정서적으로 지친다고 느낀다"에 대한 응답', NULL),
+  c('문항 "나는 근무일이 끝날 때 기진맥진하다고 느낀다"에 대한 응답', NULL),
+  c('문항 "나는 아침에 일어나 또 하루의 업무를 마주해야 할 때 피로를 느낀다"에 대한 응답', NULL),
+  c('문항 "나는 내 업무로 인해 소진되었다고 느낀다"에 대한 응답', NULL),
+  c('문항 "하루 종일 사람들과 일하는 것은 나에게 상당한 부담이다"에 대한 응답', NULL)))
 
-cat("\n - **Depersonalization** \n ")
+cat("\n - **비인격화(Depersonalization)** \n ")
 
 
-summary_df(survey %>% mutate_all(as.numeric)  %>% select(16:18),"  + ", explanations = list(
-  c('Response to the item "I’ve become more callous toward people since I took this job"', NULL),
-  c('Response to the item "I worry that this job is hardening me emotionally"', NULL),
-  c('Response to the item "I feel frustrated by my job"', NULL)))
+summary_df(survey %>% mutate_all(as.numeric)  %>% select(16:18)," +", explanations = list(
+  c('문항 "나는 이 일을 시작한 이후로 사람들에게 더 냉담해졌다"에 대한 응답', NULL),
+  c('문항 "나는 이 일이 나를 정서적으로 무디게 만들까 봐 걱정된다"에 대한 응답', NULL),
+  c('문항 "나는 내 일 때문에 좌절감을 느낀다"에 대한 응답', NULL)))
 
-cat("\n - **Reduced Personal Accomplishment** \n ")
+cat("\n - **개인적 성취감 저하(Reduced Personal Accomplishment)** \n ")
 
-summary_df(survey %>% mutate_all(as.numeric)  %>% select(19:23), "  + ",explanations = list(
-  c('Response to the item "I cannot easily create a relaxed atmosphere with my students"', NULL),
-  c('Response to the item "I do not feel exhilarated after working closely with my students"', NULL),
-  c('Response to the item "I have not accomplished many worthwhile things in this job"', NULL),
-  c('Response to the item "I do not feel like I’m at the end of my rope"', NULL),
-  c('Response to question "In my work, I do not deal with emotional problems very calmly"', NULL)
+summary_df(survey %>% mutate_all(as.numeric)  %>% select(19:23), " +",explanations = list(
+  c('문항 "나는 학생들과 편안한 분위기를 쉽게 조성하지 못한다"에 대한 응답', NULL),
+  c('문항 "나는 학생들과 긴밀히 협력한 후에도 벅찬 기쁨을 느끼지 못한다"에 대한 응답', NULL),
+  c('문항 "나는 이 일에서 가치 있는 것들을 많이 이루지 못했다"에 대한 응답', NULL),
+  c('문항 "나는 인내심의 한계에 다다랐다고 느끼지 않는다"에 대한 응답', NULL),
+  c('질문 "업무에서 나는 정서적 문제를 그다지 침착하게 다루지 못한다"에 대한 응답', NULL)
 
 ))
 
@@ -666,10 +732,12 @@ summary_df(survey %>% mutate_all(as.numeric)  %>% select(19:23), "  + ",explanat
 rmarkdown::paged_table(survey, options=list( rows.print=5 ))
 ```
 
+
+```{=tex}
 \begingroup
 \fontsize{4pt}{6pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-burnout-survey-data
 #| tbl-cap: "Preview of the burnout survey data answers"
@@ -677,8 +745,11 @@ survey = rio::import("https://github.com/lamethods/data/raw/main/4_teachersBurno
 rownames(survey) <- NULL
 gt::gt_preview(survey)
 ```
-
+```{=tex}
 \endgroup
+```
+
+
 
 ```{r, echo=F, fig.width= 4, fig.height= 4}
 #| label: fig-burnout-likert
@@ -693,8 +764,8 @@ likert_items <- likert(survey)
 plot(likert_items, group.order = colnames(survey), plot.percent.low = FALSE, plot.percent.high = FALSE, plot.percent.neutral = FALSE )
 ```
 
-### 학제간 학술적 글쓰기 자기효능감
 
+### 학제간 학술적 글쓰기 자기효능감
 <!--https://doi.org/10.1016/j.asw.2021.100524-->
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/5_sawses)
@@ -704,10 +775,10 @@ plot(likert_items, group.order = colnames(survey), plot.percent.low = FALSE, plo
 설문 문항은 세 개의 차원과 관련되어 있다. 첫 번째 차원은 글쓰기의 필수 요소(Writing Essentials)로, 종합, 정서 조절, 언어와 관련된 세 개 문항으로 구성된다. 두 번째 차원은 관계적 성찰적 글쓰기(Relational Reflective Writing)로, 글쓰기 조력자 및 성찰을 통한 자기 자신과의 관계 형성과 관련된 일곱 개 문항으로 구성된다. 세 번째 차원은 창의적 정체성(Creative Identity)으로, 학생이 변혁적 글쓰기를 성취하는 데 있어서의 격차와 관련된 여섯 개 문항으로 구성된다. 나이, 성별, 중등 이후 교육 재학 연수, 영어 사용 여부, 영어 글쓰기 수준, 글쓰기에 대한 태도에 대한 인구통계 데이터도 포함되어 있다.
 
 이 설문은 발표된 논문에서 타당성이 검증되었다 \[72\]. 우리는 군집화 알고리즘을 다루는 8장에서 이 데이터셋을 사용한다 \[12\]. 이 데이터셋은 CC0 1.0 라이선스로 공개되어 있는데, 이는 저자의 허락을 구하지 않고도 상업적 목적을 포함하여 누구나 이 데이터셋을 복제, 수정, 배포할 수 있음을 의미한다. 아래에서는 데이터셋의 변수를 설명한다.
-
 ```{r, echo = F, message = F, warning=F}
 library(haven)
 ```
+
 
 ```{r, include=FALSE}
 sawses = rio::import("https://github.com/lamethods/data/raw/main/5_sawses/Interdisciplinary_Graduate_and_Undergraduate_Student_Data.RDS", trust = T)
@@ -726,6 +797,11 @@ sawses_demographic <- sawses %>%
   )
 
 ```
+
+
+
+
+
 
 ```{r, include=FALSE}
 sawses_questionary <- sawses %>%
@@ -753,20 +829,22 @@ sawses_questionary <- sawses %>%
 
 ```{r, results="asis", echo=FALSE}
 summary_df(sawses_demographic," +",  explanations = list(
-  c("Age", NULL),
-  c("Student's gender, 1 = male (24.91%), 2 = female (72.12%), 3 = non-binary (2.97%)", "character"),
-  c("Writing attitude, 1 = dislikes writing (44.73%), 2 = somewhere in between (14.37%), or 3 = likes writing (44.73%)", "character"),
-  c("Academic level, 1 = undergraduate (67.29%), 2 =  graduate (32.71%)", "character"),
-  c("Undergraduate years in the school for undergraduate students", NULL),
-  c("Graduate years in the school for graduate students", NULL),
-  c("English writing status (1-5)", "character"),
-  c("English language status (1-5)", NULL)
+  c("나이", NULL),
+  c("학생의 성별, 1 = 남성(24.91%), 2 = 여성(72.12%), 3 = 논바이너리(2.97%)", "character"),
+  c("글쓰기에 대한 태도, 1 = 글쓰기를 싫어함(44.73%), 2 = 중간(14.37%), 3 = 글쓰기를 좋아함(44.73%)", "character"),
+  c("학업 수준, 1 = 학부(67.29%), 2 = 대학원(32.71%)", "character"),
+  c("학부생의 재학 연수", NULL),
+  c("대학원생의 재학 연수", NULL),
+  c("영어 글쓰기 수준(1~5)", "character"),
+  c("영어 사용 수준(1~5)", NULL)
 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{6pt}{8pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
+```
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-sawses-demographic
@@ -774,42 +852,43 @@ summary_df(sawses_demographic," +",  explanations = list(
 gt::gt_preview(sawses_demographic)
 ```
 
+```{=tex}
 \endgroup
-
+```
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(sawses_demographic, options=list( rows.print=5 ))
 ```
 
-다음으로 각 차원에 대한 설문 응답을 제시한다. 응답은 0\~100점 척도로 되어 있다. 아래는 데이터의 미리보기이며, @fig-survey-writing 은 설문 응답 분포의 일부를 상자그림으로 보여준다.
+다음으로 각 차원에 대한 설문 응답을 제시한다. 응답은 0~100점 척도로 되어 있다. 아래는 데이터의 미리보기이며, @fig-survey-writing 은 설문 응답 분포의 일부를 상자그림으로 보여준다.
 
 ```{r, results="asis", echo=FALSE}
-cat("\n - **Writing Essentials** \n \n")
+cat("\n - **글쓰기의 필수 요소(Writing Essentials)** \n \n")
 
 summary_df(sawses_questionary %>% select(1:3), " +", explanations = list(
-  c('Response to the item "Even when the writing is hard, I can find ways to overcome my writing difficulties"', NULL),
-  c('Response to the item "I can successfully use scholarly academic words and phrases when writing in my courses"', NULL),
-  c('Response to the item "I can combine or synthesize multiple sources I’ve read to create an original product or text"', NULL)))
+  c('문항 "글쓰기가 어려울 때에도 나는 그 어려움을 극복할 방법을 찾을 수 있다"에 대한 응답', NULL),
+  c('문항 "나는 수업에서 글을 쓸 때 학술적인 단어와 표현을 성공적으로 사용할 수 있다"에 대한 응답', NULL),
+  c('문항 "나는 읽은 여러 자료를 결합하거나 종합하여 독창적인 결과물이나 글을 만들어낼 수 있다"에 대한 응답', NULL)))
 
-cat("\n - **Relational Reflective Writing** \n \n")
+cat("\n - **관계적 성찰적 글쓰기(Relational Reflective Writing)** \n \n")
 
 summary_df(sawses_questionary %>% select(5:7,9,10,14:16),  " +", explanations = list(
-  c('Response to the item "When I write, I can think about my audience and write so they clearly understand my meaning"', NULL),
-  c('Response to the item "When I receive feedback on my writing, no matter how it makes me feel, I can use that feedback to improve my writing in the future"', NULL),
-  c('Response to the item "When I reflect on what I am writing I can make my writing better"', NULL),
-  c('Response to the item "When I read articles about my topic, the connections I feel with the ideas of other authors can inspire me to express my own ideas in writing"', NULL),
-  c('Response to the item "When I look at the overall picture I’ve presented in my writing, I can assess how all the pieces tell the complete story of my topic or argument"', NULL),
-  c('Response to the item "I can recognize when I’ve wandered away from writing what my audience needs to know and have begun writing about interesting, but unrelated, ideas"', NULL),
-  c('Response to the item "With each new writing assignment, I can adapt my writing to meet the needs of that assignment"', NULL),
-  c('Response to the item "When I seek feedback on my writing, I can decide when that feedback should be ignored or incorporated into a revision in my writing"', NULL)))
+  c('문항 "나는 글을 쓸 때 독자를 염두에 두고 내 의도를 명확히 이해할 수 있도록 쓸 수 있다"에 대한 응답', NULL),
+  c('문항 "내 글에 대한 피드백을 받을 때, 그것이 어떤 기분이 들게 하든 나는 그 피드백을 활용해 앞으로의 글쓰기를 개선할 수 있다"에 대한 응답', NULL),
+  c('문항 "내가 쓰고 있는 글을 성찰할 때 나는 내 글을 더 낫게 만들 수 있다"에 대한 응답', NULL),
+  c('문항 "내 주제에 관한 글을 읽을 때, 다른 저자들의 생각과 내가 느끼는 연결감이 내 생각을 글로 표현하도록 영감을 준다"에 대한 응답', NULL),
+  c('문항 "내 글에서 제시한 전체적인 그림을 볼 때, 나는 모든 부분이 주제나 주장에 대한 완전한 이야기를 어떻게 전달하는지 평가할 수 있다"에 대한 응답', NULL),
+  c('문항 "나는 독자가 알아야 할 내용에서 벗어나 흥미롭지만 관련 없는 생각을 쓰기 시작했음을 알아차릴 수 있다"에 대한 응답', NULL),
+  c('문항 "새로운 글쓰기 과제를 받을 때마다 나는 그 과제의 요구에 맞게 내 글쓰기를 조정할 수 있다"에 대한 응답', NULL),
+  c('문항 "내 글에 대한 피드백을 구할 때, 나는 그 피드백을 무시할지 아니면 글의 수정에 반영할지를 판단할 수 있다"에 대한 응답', NULL)))
 
-cat("\n - **Creative Identity** \n \n")
+cat("\n - **창의적 정체성(Creative Identity)** \n \n")
 
 summary_df(sawses_questionary %>% select(4,8,11,12,13), " +", explanations = list(
-  c('Response to the item "I can use creativity when writing an academic paper"', NULL),
-  c('Response to the item "I feel I can give my writing a creative spark and still sound professional"', NULL),
-  c('Response to the item "I feel I can develop my own writing voice (ways of speaking in my writing that are uniquely me)"', NULL),
-  c('Response to the item "Even with very specific assignment guidelines, I can find ways of writing my assignment to make it original or unique"', NULL),
-  c('Response to the item "I can comfortably express the concepts, language, and values of my discipline or major in my writing assignments"', NULL)
+  c('문항 "나는 학술 논문을 쓸 때 창의성을 발휘할 수 있다"에 대한 응답', NULL),
+  c('문항 "나는 내 글에 창의적인 활력을 불어넣으면서도 전문적으로 들리게 할 수 있다고 느낀다"에 대한 응답', NULL),
+  c('문항 "나는 나만의 고유한 글쓰기 목소리(나만의 표현 방식)를 개발할 수 있다고 느낀다"에 대한 응답', NULL),
+  c('문항 "매우 구체적인 과제 지침이 주어지더라도 나는 과제를 독창적이거나 고유하게 작성할 방법을 찾을 수 있다"에 대한 응답', NULL),
+  c('문항 "나는 과제에서 내 전공이나 분야의 개념, 언어, 가치를 편안하게 표현할 수 있다"에 대한 응답', NULL)
 ))
 
 ```
@@ -818,17 +897,21 @@ summary_df(sawses_questionary %>% select(4,8,11,12,13), " +", explanations = lis
 rmarkdown::paged_table(sawses_questionary, options=list( rows.print=5 ))
 ```
 
+
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-sawses-sawses_questionary
 #| tbl-cap: "Preview of the SAWSES questionnaire responses"
 gt::gt_preview(sawses_questionary)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, echo=F, fig.width= 6, fig.height= 4}
 #| label: fig-survey-writing
@@ -869,6 +952,7 @@ ggplot(data = sawses_questionary_plots, aes(x = value, y = dimension)) +
 
 ```
 
+
 ### MOOC 내 교육자 토론 데이터(SNA)
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/6_snaMOOC)
@@ -889,15 +973,16 @@ rownames(interaction_elements) <- NULL
    )
 ```
 
-- **엣지(Edges) 파일**: 이 파일은 누가(소통의 출처 또는 발신자) 누구와(소통의 대상 또는 수신자) 상호작용했는지를 정의한다. 엣지 파일에는 시간, 토론 주제, 그룹과 같은 추가적인 메타데이터도 함께 제공된다. 아래는 엣지 파일 중 하나의 미리보기이며, @fig-mooc-all-nodes 는 포럼 기여자들 사이의 협업 네트워크를 보여준다.
+-   **엣지(Edges) 파일**: 이 파일은 누가(소통의 출처 또는 발신자) 누구와(소통의 대상 또는 수신자) 상호작용했는지를 정의한다. 엣지 파일에는 시간, 토론 주제, 그룹과 같은 추가적인 메타데이터도 함께 제공된다. 아래는 엣지 파일 중 하나의 미리보기이며, @fig-mooc-all-nodes 는 포럼 기여자들 사이의 협업 네트워크를 보여준다.
+
 
 ```{r, results="asis", echo=FALSE}
-summary_df(interaction_elements_filtered, "    +", explanations = list(
-  c("Source of the communication identifier (1-445)", "character"),
-  c("Target of the communication identifier (1-445)", "character"),
-  c('Timestamp of the intervention in "m/d/Y H:M" format, ranging from April 10th 2013 to June 8th 2013', "character"),
-  c("Title of the discussion", NULL),
-  c("Category of the discussion", NULL)
+summary_df(interaction_elements_filtered, " +", explanations = list(
+  c("발신자(소통의 출처) 식별자(1~445)", "character"),
+  c("수신자(소통의 대상) 식별자(1~445)", "character"),
+  c('개입의 타임스탬프, "m/d/Y H:M" 형식(2013년 4월 10일~2013년 6월 8일)', "character"),
+  c("토론 제목", NULL),
+  c("토론 범주", NULL)
 ), ignore = c(T,T,T,T,T))
 ```
 
@@ -905,17 +990,20 @@ summary_df(interaction_elements_filtered, "    +", explanations = list(
 rmarkdown::paged_table(interaction_elements_filtered, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-edges
 #| tbl-cap: "Preview of the MOOC for educators discussion data (edges)"
 gt::gt_preview(interaction_elements_filtered)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, fig.width=5, fig.height=5, echo=F, warning=F, message=F}
 #| label: fig-mooc-all-nodes
@@ -932,7 +1020,10 @@ plot(g3, edge.width = graph3_df$weight/5,  edge.arrow.size = graph3_df$weight/35
      layout = layout_with_fr(graph = g3))
 ```
 
-- **노드(Nodes) 파일**: 이 파일은 상호작용하는 교사들의 특성, 즉 ID, 직무 상태, 전문성 수준을 정의한다. 아래는 노드 파일 데이터 중 하나의 미리보기이다.
+
+
+
+-   **노드(Nodes) 파일**: 이 파일은 상호작용하는 교사들의 특성, 즉 ID, 직무 상태, 전문성 수준을 정의한다. 아래는 노드 파일 데이터 중 하나의 미리보기이다.
 
 ```{r, include=F}
 nodes = rio::import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/DLT1%20Nodes.csv")
@@ -940,26 +1031,26 @@ rownames(nodes) <- NULL
 nodes_filtered <- nodes %>% select ("UID", "role1", "experience", "experience2", "country", "gender", "expert")
 
 ```
-
 ```{r, results="asis", echo=FALSE}
-summary_df(nodes_filtered, "    +", explanations = list(
-c("Teacher identifier (1-445)", "character"),
-c("Role of the teacher", NULL),
-c("Level of experience (1-3)", NULL),
-c("Years of experience", NULL),
-c("Country of origin", NULL),
-c("Teachers' gender, female (68.09%); male (31.69%)", NULL),
-c("Level of expertise (0-1)", NULL)
+summary_df(nodes_filtered, " +", explanations = list(
+c("교사 식별자(1~445)", "character"),
+c("교사의 역할", NULL),
+c("경력 수준(1~3)", NULL),
+c("경력 연수", NULL),
+c("출신 국가", NULL),
+c("교사의 성별, 여성(68.09%); 남성(31.69%)", NULL),
+c("전문성 수준(0~1)", NULL)
 ))
 ```
-
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
+```
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-nodes
@@ -967,9 +1058,12 @@ rmarkdown::paged_table(nodes , options=list( rows.print=5 ))
 gt::gt_preview(nodes)
 ```
 
+```{=tex}
 \endgroup
+```
 
-- **중심성(Centralities) 파일**: 이 파일은 참여자들의 기여 횟수(`OutDegree`), 답글 수(`InDegree`), 네트워크 내 위치(`Closeness_total`), 연결의 가치(`Eigen`), 아이디어의 확산 정도(`Diffusion_degree`) 등을 나타내는 중심성 지표를 담고 있다. 상호작용 데이터로부터 중심성을 계산하는 방법에 대한 자세한 내용은 15장을 참고하라 \[39\].
+
+-   **중심성(Centralities) 파일**: 이 파일은 참여자들의 기여 횟수(`OutDegree`), 답글 수(`InDegree`), 네트워크 내 위치(`Closeness_total`), 연결의 가치(`Eigen`), 아이디어의 확산 정도(`Diffusion_degree`) 등을 나타내는 중심성 지표를 담고 있다. 상호작용 데이터로부터 중심성을 계산하는 방법에 대한 자세한 내용은 15장을 참고하라 \[39\].
 
 ```{r, include=F}
 snamooccent = rio::import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/Centralities.csv")
@@ -977,25 +1071,26 @@ rownames(snamooccent) <- NULL
 names(snamooccent)
 ```
 
-```         
-  +  **name**: 교사 식별자(1~445).
-  +  **InDegree**: 내향 중심성(In-degree Centrality). 받은 답글 수.
-  +  **OutDegree**: 외향 중심성(Out-degree Centrality). 보낸 메시지 수.
-  +  **Closeness_total**: 근접 중심성(Closeness Centrality). 네트워크 내 위치.
-  +  **Betweenness**: 매개 중심성(Betweenness Centrality). 영향력 있는 위치.
-  +  **Eigen**: 고유벡터 중심성(Eigenvector Centrality). 연결의 가치.
-  +  **Diffusion.degree**: 확산도 중심성(Diffusion Degree Centrality) \[75\]. 아이디어의 확산.
-  +  **Coreness**: 코어니스 중심성(Coreness Centrality). 확산 능력.
-  +  **Cross_clique_connectivity**: 교차 클리크 연결성(Cross-clique Connectivity). 정보 전파의 촉진.
-```
+
+ +  **name**: 교사 식별자(1~445).
+ +  **InDegree**: 내향 중심성(In-degree Centrality). 받은 답글 수.
+ +  **OutDegree**: 외향 중심성(Out-degree Centrality). 보낸 메시지 수.
+ +  **Closeness_total**: 근접 중심성(Closeness Centrality). 네트워크 내 위치.
+ +  **Betweenness**: 매개 중심성(Betweenness Centrality). 영향력 있는 위치.
+ +  **Eigen**: 고유벡터 중심성(Eigenvector Centrality). 연결의 가치.
+ +  **Diffusion.degree**: 확산도 중심성(Diffusion Degree Centrality) \[75\]. 아이디어의 확산.
+ +  **Coreness**: 코어니스 중심성(Coreness Centrality). 확산 능력.
+ +  **Cross_clique_connectivity**: 교차 클리크 연결성(Cross-clique Connectivity). 정보 전파의 촉진.
+
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
 ```
-
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
+```
 
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-discussions-cent
@@ -1003,7 +1098,10 @@ rmarkdown::paged_table(snamooccent , options=list( rows.print=5 ))
 gt::gt_preview(snamooccent)
 ```
 
+```{=tex}
 \endgroup
+```
+
 
 ```{r, include=FALSE}
 # most_active_nodes <- interaction_elements_filtered %>%
@@ -1050,6 +1148,8 @@ gt::gt_preview(snamooccent)
 # plot(g2, edge.width = graph2_df$weight_normalized,  edge.arrow.size = graph2_df$weight_normalized/5, vertex.color = "turquoise")
 ```
 
+
+
 ### 고등학생 학습자 상호작용 데이터(SNA)
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/7_snaHS)
@@ -1058,26 +1158,26 @@ gt::gt_preview(snamooccent)
 
 이 데이터셋은 사회 네트워크 분석을 이용해 분석되었으며, 한 논문에서 간략히 소개되었고 \[77\], Creative Commons CC BY 4.0 라이선스로 공유되는데, 이는 적절한 출처 표시를 하는 한 누구나 이 데이터셋을 공유, 복제, 수정할 수 있음을 의미한다. 이 데이터셋에는 아래에서 설명하는 두 개의 파일이 포함되어 있다.
 
-- **엣지 파일**: 이 파일에는 상호작용의 출처, 대상, 가중치가 담겨 있다. 아래는 엣지 파일의 미리보기이다. @fig-kenitra-all-nodes 는 네트워크상의 모든 상호작용에 대한 그래프를 보여준다.
+-   **엣지 파일**: 이 파일에는 상호작용의 출처, 대상, 가중치가 담겨 있다. 아래는 엣지 파일의 미리보기이다.  @fig-kenitra-all-nodes 는 네트워크상의 모든 상호작용에 대한 그래프를 보여준다.
 
 ```{r, include=F}
 interaction_elementss = rio::import("https://raw.githubusercontent.com/lamethods/data/main/7_snaHS/interaction.csv")
 rownames(interaction_elementss) <- NULL
 #rmarkdown::paged_table(interaction_elementss, options=list( rows.print=5 ))
 ```
-
 ```{r, results="asis", echo=FALSE}
-summary_df(interaction_elementss, "    +", explanations = list(
-  c("Source node identifier (1-21)", "character"),
-  c("Target node identifier (1-21)", "character"),
-  c("Weight of the link (the value is always 1)", NULL)
+summary_df(interaction_elementss, " +", explanations = list(
+  c("출발 노드 식별자(1~21)", "character"),
+  c("도착 노드 식별자(1~21)", "character"),
+  c("연결의 가중치(항상 1의 값을 가짐)", NULL)
 ), ignore = c(T,T,T))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{10pt}{12pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-hs-edges
 #| tbl-cap: "Preview of the High school learners' interactions data (edges)"
@@ -1085,7 +1185,9 @@ summary_df(interaction_elementss, "    +", explanations = list(
 gt::gt_preview(interaction_elementss)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(interaction_elementss, options=list( rows.print=5 ))
@@ -1108,7 +1210,7 @@ plot(g3,  vertex.color = "turquoise",  vertex.label.color = "black",
      edge.width = graph3_df$weight/5,  edge.arrow.size = graph3_df$weight/20, layout=layout_with_dh(g3))
 ```
 
-- **노드 파일**: 상호작용하는 학생들의 특성, 예컨대 성별과 나이를 담고 있다. 아래는 데이터셋의 미리보기이다.
+-   **노드 파일**: 상호작용하는 학생들의 특성, 예컨대 성별과 나이를 담고 있다. 아래는 데이터셋의 미리보기이다.
 
 ```{r, include = F}
 nodes = rio::import("https://raw.githubusercontent.com/lamethods/data/main/7_snaHS/node.csv")
@@ -1123,26 +1225,31 @@ nodes_filtered <- nodes  %>% select(
 ```
 
 ```{r, results="asis", echo=FALSE}
-summary_df(nodes_filtered, "    +", explanations = list(
-  c("Student identifier (1-30)", "character"),
-  c("Username of the student", NULL),
-  c("Name of the student", NULL),
-  c("Gender of the student F (n = 23); M (n = 7)", NULL),
-  c('Birthdate of the student in format "D/M/Y"', NULL)
+summary_df(nodes_filtered, " +", explanations = list(
+  c("학생 식별자(1~30)", "character"),
+  c("학생의 사용자명", NULL),
+  c("학생의 이름", NULL),
+  c("학생의 성별, F(n = 23); M(n = 7)", NULL),
+  c('"D/M/Y" 형식의 학생 생년월일', NULL)
 ))
 ```
 
+
+
+```{=tex}
 \begingroup
 \fontsize{7pt}{9pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-mooc-hs-nodes
 #| tbl-cap: "Preview of the High school learners' interactions data (nodes)"
 gt::gt_preview(nodes_filtered)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, include=FALSE}
 # most_active_nodes <- interaction_elementss %>%
@@ -1212,13 +1319,17 @@ rmarkdown::paged_table(nodes_filtered, options=list( rows.print=5 ))
 
 ```
 
+
+
+
+
 ### 프로그래밍 강좌 LMS 포럼 상호작용 데이터(SNA)
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/10_snaProgramming)
 
 이 데이터셋에는 스페인의 한 고등교육기관에서 Moodle LMS를 이용해 진행된 프로그래밍 학부 강좌에서 수집된 게시판 데이터가 포함되어 있다. 이 강좌의 가장 특징적인 점은 CTMTC(팀워크 역량 종합 훈련 모형, Comprehensive Training Model of the Teamwork Competence) 방법론을 따른다는 것인데 \[78\], 이는 팀워크 기반 학습의 모든 단계, 즉 스토밍(storming), 노밍(norming), 퍼포밍(performing), 결과물 제출과 문서화에 걸쳐 팀워크 역량에 대한 개별화된 훈련과 평가를 가능하게 한다 \[79\].
 
-이 강좌는 6 ECTS의 학습량을 지닌 필수 강좌이다. 데이터는 2014\~2015학년도 1학기까지 거슬러 올라간다. 이 강좌는 프로그래밍과 수치 계산에 대한 기초 지식을 제공하며, 알고리즘 개발에 중점을 두고 실습 중심으로 진행된다. 강좌는 두 시간짜리 입문 세션으로 시작되며, 이후 학생들은 학기 내내 수업 안팎에서 CTMTC 방법론을 따르는 팀 프로젝트를 진행한다. 팀워크에 대한 개인별 증거는 작업 단계가 제시되는 포럼 활동에서 수집되며, 팀워크에 대한 그룹별 증거는 Dropbox와 위키에서 수집된다.
+이 강좌는 6 ECTS의 학습량을 지닌 필수 강좌이다. 데이터는 2014~2015학년도 1학기까지 거슬러 올라간다. 이 강좌는 프로그래밍과 수치 계산에 대한 기초 지식을 제공하며, 알고리즘 개발에 중점을 두고 실습 중심으로 진행된다. 강좌는 두 시간짜리 입문 세션으로 시작되며, 이후 학생들은 학기 내내 수업 안팎에서 CTMTC 방법론을 따르는 팀 프로젝트를 진행한다. 팀워크에 대한 개인별 증거는 작업 단계가 제시되는 포럼 활동에서 수집되며, 팀워크에 대한 그룹별 증거는 Dropbox와 위키에서 수집된다.
 
 이 데이터셋은 팀워크에 대한 개인별 증거를 다룬다. 다시 말해, 강좌 진행 중의 포럼 상호작용에 대한 정보를 담고 있다. Moodle 로그에서 얻은 원본 데이터셋은 압축된 정보를 제공하기 위해 GraphFES \[80\]의 도움을 받아 처리되었다. GraphFES의 산출물은 세 가지의 서로 다른 데이터셋으로 구성된다. 조회수(views, 사용자 a가 사용자 b가 게시한 메시지를 읽은 횟수), 답글(replies, 사용자 a가 사용자 b에게 보낸 답글 수에 대한 정보), 그리고 메시지(messages, 포럼 내 메시지의 위계적 구조를 담은 네트워크를 제공)이다. 이 데이터셋은 이전에 \[81\]에서 사용된 바 있으며, 현재는 CC 4.0 BY-NC-SA 라이선스로 공개되어 있는데, 이는 적절한 출처를 표시하고 상업적 목적으로 사용하지 않으며 원 라이선스를 유지하는 한 누구나 이 데이터를 자유롭게 공유, 변형, 배포할 수 있음을 의미한다. 이 데이터셋은 커뮤니티 탐지를 다루는 이 책의 16장에서 사용된다 \[40\]. 이 데이터셋은 답글 네트워크, 즉 방향 그래프를 제시하며, 엣지 파일과 노드 파일로 구성된다.
 
@@ -1227,13 +1338,14 @@ edgess = rio::import("https://raw.githubusercontent.com/lamethods/data/main/10_s
 rownames(edgess) <- NULL
 ```
 
-- **엣지 파일**: 이 파일에는 누가(속성 `source`) 누구와(답글을 보낸 대상, 속성 `target`) 상호작용했는지, 다시 말해 정보 교환의 발신자와 수신자, 그리고 강좌 진행 동안 오간 모든 메시지를 고려했을 때 그러한 교환이 몇 번 일어났는지(속성 `weight`)에 대한 정보가 담겨 있다. 이 데이터셋에는 총 662개의 가중 엣지가 포함되어 있다. 아래는 엣지 파일 데이터의 미리보기이며, @fig-sna-moodle 은 Moodle 사용자들 사이의 전체 상호작용 네트워크를 나타낸다.
+-   **엣지 파일**: 이 파일에는 누가(속성 `source`) 누구와(답글을 보낸 대상, 속성 `target`) 상호작용했는지, 다시 말해 정보 교환의 발신자와 수신자, 그리고 강좌 진행 동안 오간 모든 메시지를 고려했을 때 그러한 교환이 몇 번 일어났는지(속성 `weight`)에 대한 정보가 담겨 있다. 이 데이터셋에는 총 662개의 가중 엣지가 포함되어 있다. 아래는 엣지 파일 데이터의 미리보기이며, @fig-sna-moodle 은 Moodle 사용자들 사이의 전체 상호작용 네트워크를 나타낸다.
+
 
 ```{r, results="asis", echo=FALSE}
-summary_df(edgess, "    +", explanations = list(
-  c("Source node identifier (108 distinct values)", "character"),
-  c("Target node identifier (108 distinct values)", "character"),
-  c("Weight of the link")
+summary_df(edgess, " +", explanations = list(
+  c("출발 노드 식별자(108개의 서로 다른 값)", "character"),
+  c("도착 노드 식별자(108개의 서로 다른 값)", "character"),
+  c("연결의 가중치")
 ))
 ```
 
@@ -1241,17 +1353,20 @@ summary_df(edgess, "    +", explanations = list(
 rmarkdown::paged_table(edgess, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{7pt}{9pt}\selectfont
 \addtolength{\tabcolsep}{-3pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-prog-edges
 #| tbl-cap: "Preview of the programming course interaction data (edges)"
 gt::gt_preview(edgess)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, echo=FALSE}
 nodess = rio::import("https://raw.githubusercontent.com/lamethods/data/main/10_snaProgramming/hg_data_nodes.xlsx")
@@ -1259,14 +1374,17 @@ rownames(nodess) <- NULL
 nodess_filtered <- nodess[, -which(names(nodess) == "Id")]
 ```
 
-- **노드 파일**: 이 파일에는 학생, 강사, 관리자를 포함하여 Moodle 공간에서 강좌에 접근 권한을 가진 모든 사용자에 대한 정보가 담겨 있다. 이 파일에는 총 124개의 노드(사용자)가 포함되어 있으며, 이 중 110명은 학생으로 각각 5\~7명으로 구성된 19개 그룹에 분산되어 있다. 이 파일에는 각 사용자의 식별자(속성 `id`), 사용자명(속성 `user`; 익명화 이후 모든 사용자명은 `user_id` 형식을 취한다), 스레드 내 첫 게시물 수를 나타내는 최초 게시물 수(속성 `initPosts`), 다른 게시물에 대한 답글이었던 게시물 수를 나타내는 답글 수(속성 `replyPosts`), 그리고 포럼에서 해당 사용자가 작성한 전체 게시물 수(속성 `totalPosts`, `initPosts`와 `replyPosts`의 합)가 포함되어 있다. 네트워크의 중심 노드인 `user_55`는 강좌의 주강사에 해당한다는 점이 주목할 만하다. 아래는 노드 파일의 미리보기이다.
+
+-   **노드 파일**: 이 파일에는 학생, 강사, 관리자를 포함하여 Moodle 공간에서 강좌에 접근 권한을 가진 모든 사용자에 대한 정보가 담겨 있다. 이 파일에는 총 124개의 노드(사용자)가 포함되어 있으며, 이 중 110명은 학생으로 각각 5~7명으로 구성된 19개 그룹에 분산되어 있다. 이 파일에는 각 사용자의 식별자(속성 `id`), 사용자명(속성 `user`; 익명화 이후 모든 사용자명은 `user_id` 형식을 취한다), 스레드 내 첫 게시물 수를 나타내는 최초 게시물 수(속성 `initPosts`), 다른 게시물에 대한 답글이었던 게시물 수를 나타내는 답글 수(속성 `replyPosts`), 그리고 포럼에서 해당 사용자가 작성한 전체 게시물 수(속성 `totalPosts`, `initPosts`와 `replyPosts`의 합)가 포함되어 있다. 네트워크의 중심 노드인 `user_55`는 강좌의 주강사에 해당한다는 점이 주목할 만하다. 아래는 노드 파일의 미리보기이다.
+
+
 
 ```{r, results="asis", echo=FALSE}
-summary_df(nodess_filtered , "    +", explanations = list(
-  c("User identifier. There are 124 distinct users", "character"),
-  c("Number of first posts in a thread", NULL),
-  c("Number of replies to posts in a thread", NULL),
-  c("Total number of posts by a user in the forum", NULL)
+summary_df(nodess_filtered , " +", explanations = list(
+  c("사용자 식별자. 124명의 서로 다른 사용자", "character"),
+  c("스레드 내 최초 게시물 수", NULL),
+  c("스레드 내 게시물에 대한 답글 수", NULL),
+  c("포럼에서 사용자가 작성한 전체 게시물 수", NULL)
 ))
 ```
 
@@ -1274,17 +1392,20 @@ summary_df(nodess_filtered , "    +", explanations = list(
 rmarkdown::paged_table(nodess, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{7pt}{9pt}\selectfont
 \addtolength{\tabcolsep}{-5pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-prog-nodes
 #| tbl-cap: "Preview of the programming course interaction data (nodes)"
 gt::gt_preview(nodess)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, include=FALSE}
 # most_active_nodes_send <- edgess %>%
@@ -1312,6 +1433,8 @@ gt::gt_preview(nodess)
 
 ```
 
+
+
 ```{r, echo=F, fig.width= 15, fig.height= 15}
 #| label: fig-sna-moodle
 #| fig-cap: Interactions of the users in the Moodle discussion forum
@@ -1332,6 +1455,7 @@ plot(g1, edge.width = graph1_df$weight_normalized,  edge.arrow.size = graph1_df$
 
 ```
 
+
 ### 학업 프로그램 전반의 참여도와 성취도
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/9_longitudinalEngagement)
@@ -1342,10 +1466,9 @@ plot(g1, edge.width = graph1_df$weight_normalized,  edge.arrow.size = graph1_df$
 
 이 모의 데이터셋에는 8개의 연속된 강좌에 대한 142명 학생의 데이터가 포함되어 있으며, 여기에는 참여도와 성취 상태뿐 아니라 공변량 데이터도 포함된다. 이 데이터셋은 CC BY 4.0 라이선스로 공유되는데, 이는 적절한 출처 표시를 하는 한 누구나 이 데이터를 자유롭게 공유, 변형, 배포할 수 있음을 의미한다. 이 데이터셋은 다채널 순차 분석을 설명하기 위해 이 책의 13장에서 사용된다 \[33\]. 데이터셋의 미리보기는 아래에서 볼 수 있다. 프로그램 전반에 걸친 참여도와 성취도의 변화를 시각적으로 나타낸 것은 @fig-engach 에 나와 있다. 이 데이터셋에는 두 개의 파일이 포함되어 있다.
 
-#### Longitudinal engagement indicators and grades
+#### 종단적 참여도 지표와 성적
 
 `LongitudinalEngagement.csv` 파일에는 학생 및 강좌별 모든 참여도 지표(학습 활동의 빈도, 지속 시간, 규칙성)와 최종 성적이 담겨 있다. 각 열은 아래에서 설명하며, 미리보기는 아래 그리고 @fig-engindi 에서 확인할 수 있다.
-
 ```{r, include = F}
 lgeng = rio::import("https://raw.githubusercontent.com/lamethods/data/main/9_longitudinalEngagement/LongitudinalEngagement.csv")
 rownames(lgeng) <- NULL
@@ -1356,39 +1479,45 @@ names(lgeng2) <- c("UserID","CourseID","Sequence","FCV","FFCs","FFCt","FLV","RCV
 
 ```{r, results="asis", echo=FALSE}
 summary_df(lgeng , " +", explanations = list(
-  c("User identifier. There are 142 distinct users", "character"),
-  c("Course identifier. There are 38 distinct courses", "character"),
-  c("Course sequence for the student (1-8)", "character"),
-  c("Number of views of the course main page", NULL),
-  c("Number of views of the forum posts", NULL),
-  c("Number of forum posts created", NULL),
-  c("Number of lectures viewed", NULL),
-  c("Regularity of visiting the course main page", NULL),
-  c("Regularity of visiting the lectures", NULL),
-  c("Regularity of reading forum posts", NULL),
-  c("Regularity of writing forum posts", NULL),
-  c("Number of online learning sessions", NULL),
-  c("Total activity time online", NULL),
-  c("Number of active days (with online activity)", NULL),
-  c("Final grade (0-100)", NULL)
+  c("사용자 식별자. 142명의 서로 다른 사용자", "character"),
+  c("강좌 식별자. 38개의 서로 다른 강좌", "character"),
+  c("학생의 강좌 순서(1~8)", "character"),
+  c("강좌 메인 페이지 열람 횟수", NULL),
+  c("포럼 게시물 열람 횟수", NULL),
+  c("작성한 포럼 게시물 수", NULL),
+  c("시청한 강의 수", NULL),
+  c("강좌 메인 페이지 방문의 규칙성", NULL),
+  c("강의 시청의 규칙성", NULL),
+  c("포럼 게시물 열람의 규칙성", NULL),
+  c("포럼 게시물 작성의 규칙성", NULL),
+  c("온라인 학습 세션 수", NULL),
+  c("총 온라인 활동 시간", NULL),
+  c("활동 일수(온라인 활동이 있었던 날)", NULL),
+  c("최종 성적(0~100)", NULL)
 ))
 ```
+
+
+
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(lgeng, options=list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-2pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-lgeng-preview
 #| tbl-cap: "Preview of engagement indicators and final grades throughout the eight courses"
 gt::gt_preview(lgeng2)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, fig.width=10, fig.height=6, echo = F, warning=F, message=F}
 #| label: fig-engindi
@@ -1413,45 +1542,50 @@ lgeng2 %>% pivot_longer(4:15) %>% mutate(Sequence = paste0("Course ",Sequence)) 
   facet_grid(c("Sequence","name") , scales = "free_x") + theme_minimal() + xlab("Indicator") + ylab("Count") + theme(axis.text.x.bottom = element_text(size = 4),axis.text.y.left = element_text(size = 6))
 ```
 
-#### Longitudinal engagement and achievement states
+#### 종단적 참여도 및 성취 상태
 
-`SequenceEngagementAchievement.xlsx` 파일에는 각 강좌에 대한 학생들의 참여도 상태와 성취 상태, 그리고 공변량(이전 성적, 학습에 대한 태도, 성별)이 담겨 있다. 참여도 상태는 앞선 파일의 참여도 지표에 모형 기반 군집화 기법을 적용하여 얻어졌다. 성취 상태 역시 최종 성적에 유사한 방식을 적용하여 얻어졌다. 데이터셋의 열은 아래에서 설명하며, 데이터의 미리보기는 아래에서, 그래픽으로 표현한 것은 @fig-engach 에서 확인할 수 있다.
+`SequenceEngagementAchievement.xlsx`  파일에는 각 강좌에 대한 학생들의 참여도 상태와 성취 상태, 그리고 공변량(이전 성적, 학습에 대한 태도, 성별)이 담겨 있다. 참여도 상태는 앞선 파일의 참여도 지표에 모형 기반 군집화 기법을 적용하여 얻어졌다. 성취 상태 역시 최종 성적에 유사한 방식을 적용하여 얻어졌다. 데이터셋의 열은 아래에서 설명하며, 데이터의 미리보기는 아래에서, 그래픽으로 표현한 것은 @fig-engach 에서 확인할 수 있다.
 
 ```{r, include = F}
 engach = rio::import("https://raw.githubusercontent.com/lamethods/data/main/9_longitudinalEngagement/SequenceEngagementAchievement.xlsx")
 rownames(engach) <- NULL
 ```
 
+
 ```{r, results="asis", echo=FALSE}
 summary_df(engach %>% mutate(Gender = factor(Gender)) , " +", explanations = list(
-  c("User identifier. There are 142 distinct users", "character"),
-  c("Course identifier. There are 38 distinct courses", "character"),
-  c("Course sequence for the student (1-8)", "character"),
-  c("Engagement state. There are 3 distinct states: Active (29.93%), Average (47.98%), amd Disengaged (22.10%)", NULL),
-  c("Final grade of each student for each course (1-100)", "number"),
-  c("Achievement state calculated using model-based clustering. There are 3 distinct states: Achiever (39.26%), Intermediate (23.33%), and Low (37.41%)", NULL),
-  c("Achievement state calculated using tertiles. There are 3 distinct states: Achiever (33.27%), Intermediate (33.36%), and Low (33.36%)", NULL),
-  c("GPA with which the student applied to the program (1-10)", "number"),
-  c("Attitude towards learning (0-20)", "number"),
-  c("Gender (male/female). There are 44% females and 56% males", NULL)
+  c("사용자 식별자. 142명의 서로 다른 사용자", "character"),
+  c("강좌 식별자. 38개의 서로 다른 강좌", "character"),
+  c("학생의 강좌 순서(1~8)", "character"),
+  c("참여도 상태. 3가지의 서로 다른 상태: 활동적(29.93%), 보통(47.98%), 비참여(22.10%)", NULL),
+  c("각 강좌에서의 학생별 최종 성적(1~100)", "number"),
+  c("모형 기반 군집화로 산출한 성취 상태. 3가지의 서로 다른 상태: 고성취(39.26%), 중간(23.33%), 저성취(37.41%)", NULL),
+  c("삼분위수로 산출한 성취 상태. 3가지의 서로 다른 상태: 고성취(33.27%), 중간(33.36%), 저성취(33.36%)", NULL),
+  c("학생이 프로그램에 지원할 당시의 평점(GPA, 1~10)", "number"),
+  c("학습에 대한 태도(0~20)", "number"),
+  c("성별(남성/여성). 여성 44%, 남성 56%", NULL)
 ))
 ```
+
 
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(engach, options=list( rows.print = 5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{5pt}{7pt}\selectfont
 \addtolength{\tabcolsep}{-2pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-engach-preview
 #| tbl-cap: "Preview of the dataset about engagement and achievement throughout the eight courses"
 gt::gt_preview(engach)
 ```
 
+```{=tex}
 \endgroup
+```
 
 ```{r, echo = F, fig.width=8, fig.height=3}
 #| label: fig-engach
@@ -1470,6 +1604,7 @@ ach <- engach %>% mutate(UserID=as.numeric(as.factor(UserID))) %>% ggplot(aes(fi
 eng + ach
 ```
 
+
 ### 코로나19 시기 대학생의 기본 심리적 욕구 충족, 자기조절학습, 웰빙
 
 \faGithub{} [데이터셋 링크](https://github.com/lamethods/data/tree/main/11_universityCovid)
@@ -1485,68 +1620,71 @@ covid_filtered <- covid  %>% select(1:gp3)
 ```
 
 ```{r, results="asis", echo=FALSE}
-cat("\n - **Demographic data** \n \n")
+cat("\n - **인구통계 데이터(Demographic data)** \n \n")
 
 summary_df(covid_filtered[,1:3], " +", explanations = list(
-  c("Country of the student: 0 = Austria (78.60%), 1 = Finland  (21.40%)","character"),
-  c("Gender of the student: 1 = Female (70.74%), 2 = Male (28.25%), 3 = Other (0.70%)","character"),
-  c("Age of the student","number")))
+  c("학생의 국가: 0 = 오스트리아(78.60%), 1 = 핀란드(21.40%)","character"),
+  c("학생의 성별: 1 = 여성(70.74%), 2 = 남성(28.25%), 3 = 기타(0.70%)","character"),
+  c("학생의 나이","number")))
 
-cat("\n Below we describe the items of the questionnaire for each construct. The possible responses are: 1 = strongly agree, 2 = agree, 3 = somewhat agree, 4 = disagree, 5 = strongly disagree. \n")
+cat("\n 아래에서는 각 구성개념에 대한 설문 문항을 설명한다. 가능한 응답은 다음과 같다: 1 = 매우 그렇다, 2 = 그렇다, 3 = 다소 그렇다, 4 = 그렇지 않다, 5 = 전혀 그렇지 않다. \n")
 
-cat(" \n - **Basic Psychological Needs: Relatedness** \n \n")
+cat(" \n - **기본 심리적 욕구: 관계성(Relatedness)** \n \n")
 summary_df(covid_filtered[,4:6], " +", explanations = list(
-  c('Response to the item "Currently, I feel connected with my fellow students"',"number"),
-  c('Response to the item "Currently, I feel supported by my fellow students"',"number"),
-  c('Response to the item "Currently, I feel connected with the people who are important to me (family, friends)"',"number")
+  c('문항 "현재 나는 동료 학생들과 연결되어 있다고 느낀다"에 대한 응답',"number"),
+  c('문항 "현재 나는 동료 학생들로부터 지지받고 있다고 느낀다"에 대한 응답',"number"),
+  c('문항 "현재 나는 나에게 중요한 사람들(가족, 친구)과 연결되어 있다고 느낀다"에 대한 응답',"number")
 ))
-cat(" \n - **Basic Psychological Needs: Competence** \n \n")
+cat(" \n - **기본 심리적 욕구: 유능감(Competence)** \n \n")
 summary_df(covid_filtered[,7:9], " +", explanations = list(
-  c('Response to the item "Currently, I am dealing well with the demands of my studies"',"number"),
-  c('Response to the item "Currently, I have no doubts about whether I am capable of doing well in my studies"',"number"),
-  c('Response to the item "Currently, I am managing to make progress in studying for university"',"number")
+  c('문항 "현재 나는 학업의 요구를 잘 감당하고 있다"에 대한 응답',"number"),
+  c('문항 "현재 나는 내가 학업을 잘 해낼 수 있는지에 대해 의심이 없다"에 대한 응답',"number"),
+  c('문항 "현재 나는 대학 학업에서 잘 진전을 이루고 있다"에 대한 응답',"number")
 ))
-cat(" \n - **Basic Psychological Needs: Autonomy** \n \n")
+cat(" \n - **기본 심리적 욕구: 자율성(Autonomy)** \n \n")
 summary_df(covid_filtered[,10:12], " +", explanations = list(
- 	c('Response to the item "Currently, I can define my own areas of focus in my studies"', "number"),
-	c('Response to the item "Currently, I can perform tasks in the way that best suits me"', "number"),
-	c('Response to the item "In the current home-learning situation, I seek out feedback when I need it"', "number")
+ 	c('문항 "현재 나는 학업에서 나만의 중점 영역을 정할 수 있다"에 대한 응답', "number"),
+	c('문항 "현재 나는 나에게 가장 잘 맞는 방식으로 과제를 수행할 수 있다"에 대한 응답', "number"),
+	c('문항 "현재의 자택 학습 상황에서 나는 필요할 때 피드백을 구한다"에 대한 응답', "number")
 ))
 
-cat(" \n - **Positive Emotion**  \n \n")
+cat(" \n - **긍정적 정서(Positive Emotion)**  \n \n")
 summary_df(covid_filtered[,13:15], " +", explanations = list(
- 	c('Response to the item "I feel good"',"number"),
- 	c('Response to the item "I feel confident"',"number"),
- 	c('Response to the item "Even if things are difficult right now, I believe that everything will turn out all right"',"number")))
+ 	c('문항 "나는 기분이 좋다"에 대한 응답',"number"),
+ 	c('문항 "나는 자신감을 느낀다"에 대한 응답',"number"),
+ 	c('문항 "지금 상황이 힘들더라도 나는 모든 일이 잘 풀릴 것이라고 믿는다"에 대한 응답',"number")))
 
-cat(" \n - **Intrinsic learning motivation**  \n \n")
+cat(" \n - **내재적 학습 동기(Intrinsic learning motivation)**  \n \n")
 summary_df(covid_filtered[,16:18], " +", explanations = list(
-  c('Response to the item "Currently, doing work for university is really fun"', "number"),
-  c('Response to the item "Currently, I am really enjoying studying and doing work for university"', "number"),
-  c('Response to the item "Currently, I find studying for university really exciting"', "number")))
+  c('문항 "현재 대학 학업을 하는 것은 정말 재미있다"에 대한 응답', "number"),
+  c('문항 "현재 나는 대학 학업을 위한 공부를 정말 즐기고 있다"에 대한 응답', "number"),
+  c('문항 "현재 나는 대학 학업이 정말 흥미롭다고 느낀다"에 대한 응답', "number")))
 
-cat(" \n - **Self-regulated learning**  \n \n")
+cat(" \n - **자기조절학습(Self-regulated learning)**  \n \n")
 summary_df(covid_filtered[,19:21], " +", explanations = list(
-  c('Response to the item "In the current home-learning situation, I plan my course of action"',"number"),
-  c('Response to the item "In the current home-learning situation, I think about how I want to study before I start"',"number"),
-  c('Response to the item "In the current home-learning situation, I formulate learning goals that I use to orient my studying"',"number")))
+  c('문항 "현재의 자택 학습 상황에서 나는 내가 취할 행동 방침을 계획한다"에 대한 응답',"number"),
+  c('문항 "현재의 자택 학습 상황에서 나는 시작하기 전에 어떻게 공부할지 생각한다"에 대한 응답',"number"),
+  c('문항 "현재의 자택 학습 상황에서 나는 학습의 방향을 잡기 위해 사용할 학습 목표를 세운다"에 대한 응답',"number")))
 ```
-
 ```{r eval=knitr::is_html_output(), echo=F}
 rmarkdown::paged_table(covid_filtered, options=list( rows.print=5 ))
 ```
 
+```{=tex}
 \begingroup
 \fontsize{6pt}{8pt}\selectfont
 \addtolength{\tabcolsep}{-3.5pt}
-
+```
 ```{r eval=knitr::is_latex_output(), echo=FALSE}
 #| label: tbl-covid-survey-preview
 #| tbl-cap: "Preview of the COVID-19 well-being survey data"
 gt::gt_preview(covid_filtered)
 ```
 
+```{=tex}
 \endgroup
+```
+
 
 ```{r, echo=F, fig.width= 4, fig.height= 3}
 #| label: fig-covid-likert
@@ -1562,11 +1700,13 @@ plot(likert_items, group.order = colnames(covid_filtered_survey), plot.percent.l
 
 ```
 
+
 ## 논의
 
 이 장에서 우리는 학습분석학 연구에서 운용되는 데이터 유형에 대한 개관을 제공했다. 우리의 여정은 기초적인 인구통계 정보에서부터, 학생들이 온라인 학습 기술과 상호작용하며 남기는 흔적—클릭, 활동, 사회적 상호작용, 평가 데이터를 포함하여—에 이르기까지 폭넓은 데이터 유형을 아울렀다. 우리는 각 데이터 유형에 가장 흔히 사용되는 분석 기법 몇 가지를 짚어보았고, 각 유형의 분석을 다룬 이 책의 장들로 독자를 안내했다. 이어서 우리는 예시가 되는 데이터셋들을 세심하게 엄선하여 제시했다. 우리는 각 데이터셋을 자세히 설명하면서, 관련된 변수들을 기술하고 표현했다. 또한 이 책의 나머지 장들에서 각 데이터셋이 어떻게 분석되었는지도 밝혔다.
 
 학습자 데이터를 수집하는 일이 쉬운 과제가 아니라는 점을 밝혀두어야 한다. 무엇보다도 서로 다른 유형의 데이터를 수집하고 사용하는 것의 윤리적 함의를 고려하고, 데이터 보호 관련 법률과 규정을 준수하는 것이 중요하다 \[14\]. 또한 특히 데이터가 이질적인 출처에서 대량으로 제공되는 상황에서는 \[83\], 예컨대 교육 분야에서처럼 \[84\], 데이터로부터 타당한 결론을 도출하기 위해 데이터 품질을 확보하는 것이 중요하다. 이러한 요건들 때문에 온라인에서 양질의 공개 데이터셋을 찾는 일은 대단히 어려운 과제가 된다. 이러한 점에서, 우리는 이 장에서 제공한 선정 목록이 이 책의 범위를 넘어서도 독자에게 유용하기를 바란다. 몇몇 논문은 학습분석학 \[85\]이나 교육 데이터 마이닝 \[86\]에 적합한 그 밖의 데이터셋 모음을 제공한 바 있다. 또한 여러 분야에 걸쳐 데이터셋이 지속적으로 공개되는 공개 데이터 저장소를 참고할 것을 독자에게 권한다. Zenodo(<https://zenodo.org>), 미국 교육부 공개 데이터 플랫폼(<https://data.ed.gov>), 하버드 데이터버스(<https://dataverse.harvard.edu>), 유럽 데이터 포털(<https://data.europa.eu>), 멘델리 데이터(<https://data.mendeley.com>), openICPSR(<https://www.openicpsr.org>), 구글 데이터셋 검색(<https://datasetsearch.research.google.com>), figshare(<https://figshare.com>), 오픈 사이언스 프레임워크(<https://osf.io>), data.world(<https://data.world>) 등이 있다.
+
 
 ## 참고문헌
 
@@ -1579,7 +1719,7 @@ plot(likert_items, group.order = colnames(covid_filtered_survey), plot.percent.l
 7.  Tikka S, Kopra J, Heinäniemi M, López-Pernas S, Saqr M (2024) Basics of R. In: Saqr M, López-Pernas S (eds) Learning analytics methods and tutorials: A practical guide using R. Springer
 8.  Kopra J, Tikka S, Heinäniemi M, López-Pernas S, Saqr M (2024) Data cleaning and wrangling. In: Saqr M, López-Pernas S (eds) Learning analytics methods and tutorials: A practical guide using R. Springer
 9.  López-Pernas S, Misiejuk K, Tikka S, Saqr M, Kopra J, Heinäniemi M (2024) Visualizing and Reporting Educational Data with R. In: Saqr M, López-Pernas S (eds) Learning analytics methods and tutorials: A practical guide using R. Springer
-10. Meaney M, Fikes T (2022) Adding a Demographic Lens to Cluster Analysis of Participants in Entry-level Massive Open Online Courses (MOOCs). Proceedings of the Ninth ACM Conference on Learning \@ Scale.
+10. Meaney M, Fikes T (2022) Adding a Demographic Lens to Cluster Analysis of Participants in Entry-level Massive Open Online Courses (MOOCs). Proceedings of the Ninth ACM Conference on Learning @ Scale.
 11. Scrucca L, Saqr M, López-Pernas S, Murphy K (2024) An Introduction and R Tutorial to Model-based Clustering in Education via Latent Profile Analysis. In: Saqr M, López-Pernas S (eds) Learning analytics methods and tutorials: A practical guide using R. Springer
 12. Murphy K, López-Pernas S, Saqr M (2024) Dissimilarity-based Cluster Analysis of Educational Data: A Comparative Tutorial using R. In: Saqr M, López-Pernas S (eds) Learning analytics methods and tutorials: A practical guide using R. Springer
 13. Du X, Yang J, Shelton BE, Hung JL, Zhang M (2019) A systematic meta-Review and analysis of learning analytics research. Behaviour & Information Technology 40(1):49–62.
@@ -1656,3 +1796,13 @@ plot(likert_items, group.order = colnames(covid_filtered_survey), plot.percent.l
 84. Klašnja-Milićević A, Ivanović M, Budimac Z (2017) Data science in education: Big data and learning analytics. Computer Applications in Engineering Education 25(6):1066–1078.
 85. Dietze S, Siemens G, Taibi D, Drachsler H (2016) Editorial: Datasets for Learning Analytics. Journal of Learning Analytics 3(2):307–311.
 86. Mihaescu MC, Popescu PS (2021) Review on publicly available datasets for educational data mining. WIREs Data Mining and Knowledge Discovery 11(3).
+
+
+
+
+
+
+
+
+
+
