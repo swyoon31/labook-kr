@@ -98,7 +98,7 @@ z
 
 이 장에서 소개하는 기본 명령 외에도, 실제 R 프로그래밍은 과학 커뮤니티가 개발한 다양한 패키지의 사용에 크게 의존한다. 패키지는 새로운 함수, 클래스, 데이터를 포함하는 코드 모음으로, 즉 R을 확장하는 역할을 한다. 대부분의 R 패키지는 Comprehensive R Archive Network(CRAN)에서 받을 수 있다. 패키지는 `install.packages()` 함수로 설치하거나, 실제로는 `install.packages()` 함수를 호출하는 RStudio의 설치 창을 통해 설치할 수 있다. 여러 패키지를 한 번에 설치할 수도 있다. 아래 명령은 `dplyr` \[9\] 와 `tidyr` 패키지를 설치한다.
 
-```{r, eval=FALSE, message=FALSE}
+```{r}
 #| eval: false
 #| message: false
 install.packages(c("dplyr", "tidyr"))
@@ -333,7 +333,7 @@ sd(grades)
 ### tibble
 
 `tibble`은 tidyverse 프로그래밍 패러다임에서 사용되는 `data.frame` 객체의 확장이다 \[10\]. tidyverse를 사용하려면, 핵심 tidyverse 패키지를 모두 불러오는 `tidyverse` \[11\] (메타)패키지를 로드할 것을 권한다.
-```{r, message=FALSE, warning=FALSE}
+```{r}
 #| message: false
 #| warning:  false
 
@@ -484,7 +484,7 @@ ifelse(cond, x, y)
 ## 반복문
 
 경우에 따라 조건을 달리하며 같은 코드 조각을 여러 번 실행하고 싶을 수 있다. 각 조건마다 같은 코드를 여러 번 작성하는 대신, 반복 구조를 사용할 수 있다. R에는 두 가지 유형의 반복문이 있다: `for` 반복문과 `while` 반복문. 이 둘의 주된 차이는, `for`는 항상 반복문과 관련된 코드를 정해진 횟수만큼 실행하는 반면 `while`은 특정 조건이 충족되는 한 계속해서 코드를 실행한다는 것이다. 이 반복문들의 문법은 다음과 같다.
-```{r eval=FALSE}
+```{r}
 #| eval: false
 #| echo: true
 for (var in seq) expr
